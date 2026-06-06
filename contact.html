@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Clergy Mandizvidza</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        /* HEADER */
+        .topnav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e3a8a;
+            padding: 12px 30px;
+            color: white;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-section img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: #1e3a8a;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #e5e7eb;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* HERO BANNER */
+        .hero {
+            background: url('itbanner.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        h3 {
+            color: #1e3a8a;
+            margin-top: 25px;
+        }
+
+        a {
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        .contact-box p {
+            margin: 8px 0;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="topnav">
+    <div class="logo-section">
+        <img src="profile.jpg" alt="Profile Photo">
+        <div class="logo-text">Clergy Mandizvidza</div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="professional.html">Professional Goals</a>
+        <a href="spiritual.html">Spiritual</a>
+
+        <div class="dropdown">
+            <button class="dropdown-btn">More ▼</button>
+            <div class="dropdown-content">
+                <a href="projects.html">Projects</a>
+                <a href="resume.html">Résumé</a>
+                <a href="contact.html">Contact</a>
+                <a href="reflections.html">Reflections</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Contact Me</h1>
+    <p>Let’s connect — technology, engineering, leadership, and lifelong learning.</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <h2>Get in Touch</h2>
+    <p>
+        I welcome opportunities to connect with professionals, mentors, employers, and fellow students.  
+        Whether you want to collaborate, network, or discuss opportunities, feel free to reach out.
+    </p>
+
+    <hr>
+
+    <h2>Contact Details</h2>
+
+    <div class="contact-box">
+        <h3>📧 Email</h3>
+        <p><a href="mailto:mclergy06@gmail.com">mclergy06@gmail.com</a></p>
+    </div>
+
+    <div class="contact-box">
+        <h3>📱 Phone</h3>
+        <p>+44 7458 676 460</p>
+    </div>
+
+    <div class="contact-box">
+        <h3>📍 Location</h3>
+        <p>Preston, Lancashire, United Kingdom</p>
+    </div>
+
+    <div class="contact-box">
+        <h3>🔗 LinkedIn</h3>
+        <p>
+            <a href="https://www.linkedin.com/in/clergy-mandizvidza" target="_blank">
+                linkedin.com/in/clergy-mandizvidza
+            </a>
+        </p>
+    </div>
+
+    <div class="contact-box">
+        <h3>📄 Résumé</h3>
+        <p>
+            <a href="https://docs.google.com/document/d/1HXjnuKzsiKZ5mhYbGrDU3VC6_XQoPQ3z/edit?usp=sharing" target="_blank">
+                View / Download My Résumé
+            </a>
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>Professional Summary</h2>
+    <p>
+        I am an Information Technology System Administration student with a strong background in engineering,  
+        electrical systems, renewable energy, troubleshooting, cloud computing, and technical support.  
+        I am passionate about building reliable systems, solving problems, and serving others through technology.
+    </p>
+
+    <hr>
+
+    <h2>Thank You</h2>
+    <p>
+        Thank you for taking the time to visit my portfolio.  
+        I look forward to connecting and exploring future opportunities together.
+    </p>
+
+</div>
+
+<footer>
+    © 2026 Clergy Mandizvidza — All Rights Reserved
+</footer>
+
+</body>
+</html>
