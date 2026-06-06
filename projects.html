@@ -1,314 +1,419 @@
-<!-- TOP NAVIGATION BAR WITH PHOTO + SEARCH ICON + DROPDOWN -->
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f7f9fc;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Portfolio - Clergy Mandizvidza</title>
 
-    .topnav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #1e3a8a;
-        padding: 12px 30px;
-        color: white;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
 
-    .logo-section {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
+        /* HEADER */
+        .topnav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e3a8a;
+            padding: 12px 30px;
+            color: white;
+        }
 
-    .logo-section img {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid white;
-    }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    .logo-text {
-        font-size: 22px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
+        .logo-section img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
 
-    .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
 
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-    }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-    .nav-links a:hover {
-        text-decoration: underline;
-    }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-    .search-icon {
-        font-size: 20px;
-        cursor: pointer;
-    }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
 
-    /* DROPDOWN MENU */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
+        /* DROPDOWN */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-    .dropdown-btn {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+        .dropdown-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        right: 0;
-        background-color: white;
-        min-width: 180px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-        border-radius: 6px;
-        z-index: 1000;
-    }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 6px;
+            z-index: 1000;
+        }
 
-    .dropdown-content a {
-        color: #1e3a8a;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        font-weight: bold;
-    }
+        .dropdown-content a {
+            color: #1e3a8a;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
 
-    .dropdown-content a:hover {
-        background-color: #e5e7eb;
-    }
+        .dropdown-content a:hover {
+            background-color: #e5e7eb;
+        }
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-    /* SEARCH BAR */
-    #searchBar {
-        display: none;
-        width: 90%;
-        margin: 15px auto;
-        padding: 10px;
-        border: 2px solid #1e3a8a;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-</style>
+        /* HERO BANNER */
+        .hero {
+            background: url('itbanner.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        h3 {
+            color: #1e3a8a;
+            margin-top: 25px;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 2px solid #1e3a8a;
+        }
+
+        ul {
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
 
 <!-- HEADER -->
 <div class="topnav">
     <div class="logo-section">
-        <img src="
-WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
+        <img src="WhatsApp Image 2026-05-23 at 17.40.05 (2).jpg" alt="Profile Photo">
         <div class="logo-text">Clergy Mandizvidza</div>
     </div>
 
     <div class="nav-links">
         <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="professional.html">Professional Goals</a>
         <a href="spiritual.html">Spiritual</a>
-        <a href="professional.html">Professional</a>
-        <a href="projects.html">Projects</a>
 
-        <!-- DROPDOWN MENU -->
         <div class="dropdown">
             <button class="dropdown-btn">More ▼</button>
             <div class="dropdown-content">
+                <a href="projects.html">Projects</a>
                 <a href="resume.html">Résumé</a>
-                <a href="aboutme.html">About Me</a>
                 <a href="contact.html">Contact</a>
             </div>
         </div>
-
-        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
     </div>
 </div>
 
-<!-- SEARCH BAR -->
-<input type="text" id="searchBar" placeholder="Search this page..." onkeyup="searchPage()">
-
-<script>
-function toggleSearch() {
-    let bar = document.getElementById("searchBar");
-    bar.style.display = (bar.style.display === "none" || bar.style.display === "") ? "block" : "none";
-}
-
-function searchPage() {
-    let input = document.getElementById("searchBar").value.toLowerCase();
-    let bodyText = document.body.innerText.toLowerCase();
-
-    if (input.length > 2) {
-        if (bodyText.includes(input)) {
-            console.log("Match found");
-        } else {
-            console.log("No match");
-        }
-    }
-}
-</style>
-</head>
-
-<body>
-
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="spiritual.html">Spiritual Progression</a> |
-  <a href="professional.html">Professional Growth</a> |
-  <a href="projects.html">Projects</a> |
-  <a href="resume.html">Résumé</a>
-</nav>
-
-<h1>My Projects: A Journey of Growth, Grit, and Purpose</h1>
-
-<div class="section">
-  <p>
-    Every project I’ve completed in this program represents more than a technical requirement, it represents a moment in my journey where I chose to grow. 
-    These projects reflect the skills I’ve gained, the challenges I’ve overcome, and the person I am becoming. They show my resilience, my curiosity, and my 
-    commitment to building systems that serve people with integrity.
-  </p>
+<!-- HERO -->
+<div class="hero">
+    <h1>Projects Portfolio</h1>
+    <p>Engineering experience, IT development, troubleshooting, cloud practice, and hands‑on technical growth.</p>
 </div>
 
-<div class="section">
-  <h2>Heritage Vault 2.0 Secure Linux Infrastructure Project</h2>
-  <p>
-    Heritage Vault 2.0 is one of the most meaningful and challenging projects I’ve worked on. The goal was to design a secure, scalable Linux infrastructure 
-    capable of storing sacred genealogical data. I built out automation, centralized authentication, RAID + LVM storage, SELinux/AppArmor security, VLAN 
-    segmentation, VPN access, and monitoring with Prometheus and Grafana.
-  </p>
+<!-- MAIN CONTENT -->
+<div class="container">
 
-  <h3>Personal Story: The Night This Project Tested Me</h3>
-  <div class="highlight-box">
+    <!-- PROJECT 1 -->
+    <h2>Project 1: Overhead & Underground Powerline Maintenance – ZETDC</h2>
+    <p><strong>2017 – 2021 | Zimbabwe</strong></p>
+
+    <h3>Project Overview</h3>
     <p>
-      There was a night during this project that I still think about. I had just finished a long shift, and by the time I sat down to work on the assignment, 
-      I was exhausted. A configuration kept breaking, and no matter what I tried, the system refused to cooperate.
+        Worked on maintaining, repairing, and inspecting overhead and underground power distribution systems. Responsibilities included pole climbing, fault response, transformer checks, and ensuring safe electrical operations.
     </p>
+
+    <h3>Technical Skills Demonstrated</h3>
+    <ul>
+        <li>Electrical Systems Maintenance</li>
+        <li>Fault Diagnosis</li>
+        <li>Transformer Testing</li>
+        <li>Safety Compliance (18th Edition)</li>
+        <li>Team Coordination</li>
+    </ul>
+
+    <h3>Challenges Encountered</h3>
+    <ul>
+        <li>Responding to faults under pressure</li>
+        <li>Working in hazardous environments</li>
+        <li>Ensuring safety during live-line operations</li>
+    </ul>
+
+    <h3>Lessons Learned</h3>
     <p>
-      I sat there staring at the screen, frustrated and tempted to give up for the night. But then I remembered why I started this journey, the sacrifices I 
-      made to move countries, the challenges I’ve overcome, and the determination that brought me this far.
+        This experience strengthened my discipline, technical confidence, and ability to remain calm during high‑risk situations.
     </p>
+
+    <hr>
+
+    <!-- PROJECT 2 -->
+    <h2>Project 2: Renewable Energy System Installation – Solar Mini‑Grid</h2>
+    <p><strong>2020 | Zimbabwe</strong></p>
+
+    <h3>Project Overview</h3>
     <p>
-      So I took a deep breath, opened my notes, and tried again. And again. And again. Eventually, the system responded. The configuration worked. In that 
-      moment, I realised that my resilience is one of my greatest technical skills.
+        Assisted in installing and configuring a small‑scale solar mini‑grid system for a rural community. Tasks included wiring, inverter setup, battery configuration, and load balancing.
     </p>
+
+    <h3>Technical Skills Demonstrated</h3>
+    <ul>
+        <li>Solar System Installation</li>
+        <li>Inverter Configuration</li>
+        <li>Battery Management</li>
+        <li>Load Analysis</li>
+        <li>Energy Efficiency</li>
+    </ul>
+
+    <h3>Challenges Encountered</h3>
+    <ul>
+        <li>Balancing limited power resources</li>
+        <li>Working in remote environments</li>
+        <li>Ensuring system reliability</li>
+    </ul>
+
+    <h3>Lessons Learned</h3>
     <p>
-      This project didn’t just teach me about Linux security, it taught me about myself. It reminded me that I don’t quit when things get hard. I adapt. 
-      I persist. I grow.
+        This project deepened my interest in sustainable energy and inspired my transition into technology‑driven problem solving.
     </p>
-  </div>
+
+    <hr>
+
+    <!-- PROJECT 3 -->
+    <h2>Project 3: IT Technical Support & Troubleshooting Lab</h2>
+    <p><strong>2024 – 2025 | Ensign College</strong></p>
+
+    <h3>Project Overview</h3>
+    <p>
+        Completed hands‑on troubleshooting labs involving hardware diagnostics, operating system repair, network configuration, and customer support simulations.
+    </p>
+
+    <h3>Technical Skills Demonstrated</h3>
+    <ul>
+        <li>System Diagnostics</li>
+        <li>Windows OS Repair</li>
+        <li>Network Configuration</li>
+        <li>Customer Support</li>
+        <li>Documentation</li>
+    </ul>
+
+    <h3>Challenges Encountered</h3>
+    <ul>
+        <li>Identifying root causes of system failures</li>
+        <li>Explaining technical issues in simple terms</li>
+        <li>Testing multiple solutions efficiently</li>
+    </ul>
+
+    <h3>Lessons Learned</h3>
+    <p>
+        Strengthened my problem‑solving abilities and improved my communication with non‑technical users.
+    </p>
+
+    <hr>
+
+    <!-- PROJECT 4 -->
+    <h2>Project 4: AWS Cloud Foundations & Virtual Lab Deployment</h2>
+    <p><strong>2025 | Ensign College</strong></p>
+
+    <h3>Project Overview</h3>
+    <p>
+        Built cloud environments using AWS services including EC2, IAM, S3, and VPC. Deployed virtual machines, configured permissions, and practiced cloud security fundamentals.
+    </p>
+
+    <h3>Technical Skills Demonstrated</h3>
+    <ul>
+        <li>AWS EC2 Deployment</li>
+        <li>IAM User & Role Management</li>
+        <li>S3 Storage Configuration</li>
+        <li>VPC Networking</li>
+        <li>Cloud Security Basics</li>
+    </ul>
+
+    <h3>Challenges Encountered</h3>
+    <ul>
+        <li>Managing permissions securely</li>
+        <li>Understanding cloud networking</li>
+        <li>Optimizing resource usage</li>
+    </ul>
+
+    <h3>Lessons Learned</h3>
+    <p>
+        This project strengthened my interest in cloud computing and system administration.
+    </p>
+
+    <hr>
+
+    <!-- PROJECT 5 -->
+    <h2>Project 5: SQL Data Querying & Reporting Project</h2>
+    <p><strong>2025 | Ensign College</strong></p>
+
+    <h3>Project Overview</h3>
+    <p>
+        Designed SQL queries to extract, filter, and analyze data from relational databases. Created reports and dashboards to support decision‑making.
+    </p>
+
+    <h3>Technical Skills Demonstrated</h3>
+    <ul>
+        <li>SQL Querying</li>
+        <li>Data Filtering & Sorting</li>
+        <li>Joins & Aggregations</li>
+        <li>Report Creation</li>
+        <li>Data Visualization</li>
+    </ul>
+
+    <h3>Challenges Encountered</h3>
+    <ul>
+        <li>Optimizing complex queries</li>
+        <li>Ensuring data accuracy</li>
+        <li>Interpreting results correctly</li>
+    </ul>
+
+    <h3>Lessons Learned</h3>
+    <p>
+        Improved my analytical thinking and ability to work with structured data.
+    </p>
+
+    <hr>
+
+    <!-- PROJECT 6 -->
+    <h2>Project 6: Professional Digital Portfolio Development</h2>
+
+    <h3>Project Overview</h3>
+    <p>
+        Designed and built a professional digital portfolio showcasing my engineering background, IT skills, certifications, and spiritual growth.
+    </p>
+
+    <h3>Technical Skills Demonstrated</h3>
+    <ul>
+        <li>HTML & CSS</li>
+        <li>Website Structure Design</li>
+        <li>Content Management</li>
+        <li>Professional Writing</li>
+        <li>Digital Communication</li>
+    </ul>
+
+    <h3>Challenges Encountered</h3>
+    <ul>
+        <li>Organizing diverse experiences</li>
+        <li>Maintaining consistent design</li>
+        <li>Integrating engineering + IT + spiritual identity</li>
+    </ul>
+
+    <h3>Lessons Learned</h3>
+    <p>
+        Helped me understand how to present myself professionally and connect my values with my career goals.
+    </p>
+
+    <hr>
+
+    <h2>Overall Reflection</h2>
+    <p>
+        These projects demonstrate my growth across engineering, IT support, cloud computing, data analysis, and digital communication. Each experience has strengthened my technical abilities, leadership, and commitment to ethical, service‑oriented work.
+    </p>
+
 </div>
 
-<div class="section">
-  <h2>Ethical Logging & Privacy‑First Design</h2>
-  <p>
-    This project focused on designing a logging system that protects user privacy while still providing meaningful operational insights. I implemented 
-    minimum‑necessary data principles, removed personal identifiers, and added role‑based access controls.
-  </p>
-  <h3>What I Learned</h3>
-  <p>
-    This project helped me understand that ethical design isn’t an optional add‑on, it’s a responsibility. Technology should protect people, not expose them.
-  </p>
-</div>
-
-<div class="section">
-  <h2>Network Segmentation & Zero‑Trust Architecture</h2>
-  <p>
-    In this project, I designed a segmented network using VLANs, firewalls, and zero‑trust principles. The goal was to reduce attack surfaces and ensure that 
-    every request is authenticated and authorized.
-  </p>
-  <h3>What I Learned</h3>
-  <p>
-    Security is not a single tool, it’s a mindset. It requires thinking ahead, anticipating risks, and designing systems that protect users even when things go wrong.
-  </p>
-</div>
-
-<div class="section">
-  <h2>Automation with Bash & Ansible</h2>
-  <p>
-    This project involved automating system configuration and deployment using Bash scripting and Ansible playbooks. I automated user creation, package 
-    installation, service configuration, and security hardening.
-  </p>
-  <h3>What I Learned</h3>
-  <p>
-    Automation is about consistency, reliability, and reducing human error. It also taught me patience, debugging automation requires a different kind of persistence.
-  </p>
-</div>
-
-<div class="section">
-  <h2>Monitoring & Observability with Prometheus and Grafana</h2>
-  <p>
-    I built a monitoring stack that tracks system performance, logs, and alerts. This included dashboards, alert rules, and service health checks.
-  </p>
-  <h3>What I Learned</h3>
-  <p>
-    Monitoring is the heartbeat of any infrastructure. It’s how you see problems before users feel them.
-  </p>
-</div>
-
-<div class="section">
-  <h2>Why These Projects Matter to Me</h2>
-  <p>
-    Each project represents a moment where I chose growth over comfort. They show the evolution of my technical abilities, but more importantly, they show the 
-    evolution of my character, my resilience, my integrity, and my desire to build systems that serve people with dignity.
-  </p>
-  <p>
-    These projects are not just assignments. They are milestones in my journey.
-  </p>
-</div>
-<footer style="
-  margin-top: 50px;
-  padding: 20px;
-  text-align: center;
-  background: linear-gradient(90deg, #002244, #003366);
-  color: #ffffff;
-  font-size: 0.95rem;
-  border-top: 3px solid #001a33;
-  letter-spacing: 0.3px;
-">
-
-  <div style="margin-bottom: 8px; font-size: 1.1rem;">
-    <span style="margin-right: 8px;">✨</span>
-    <strong>Built with purpose, integrity, and discipleship</strong>
-    <span style="margin-left: 8px;">✨</span>
-  </div>
-
-  <div style="margin-top: 5px;">
-    <span style="margin-right: 6px;">©</span>2026 Mandizvidza  
-    <span style="margin: 0 10px;">•</span>
-    <a href="https://cmandie.github.io" style="color: #ffffff; text-decoration: underline;">
-      cmandie.github.io
-    </a>
-  </div>
-
-  <div style="margin-top: 10px; opacity: 0.85; font-size: 0.85rem;">
-    <span style="margin-right: 6px;">🔗</span> 
-    <a href="https://github.com/cmandie" style="color: #ffffff; text-decoration: none;">
-      GitHub Profile
-    </a>
-    <span style="margin: 0 10px;">|</span>
-    <span style="margin-right: 6px;">💼</span>
-    <a href="professional.html" style="color: #ffffff; text-decoration: none;">
-      Professional Portfolio
-    </a>
-  </div>
-
+<footer>
+    © 2026 Clergy Mandizvidza — All Rights Reserved
 </footer>
 
-  
 </body>
 </html>
-```
