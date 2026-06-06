@@ -1,88 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mandizvidza | Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
-        }
-        header {
-            background-color: #1e3a8a;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #f1f5f9;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #1e3a8a;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h1, h2 {
-            color: #1e3a8a;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            background-color: #1e3a8a;
-            color: white;
-        }
-    </style>
-</head>
+<!-- TOP NAVIGATION BAR WITH PHOTO + SEARCH ICON + DROPDOWN -->
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f9fc;
+    }
 
-<body>
+    .topnav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1e3a8a;
+        padding: 12px 30px;
+        color: white;
+    }
 
-<header>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Becoming a disciple‑leader who builds with purpose, integrity, and resilience.</p>
-</header>
+    .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
 
-<nav>
-    <a href="spiritual.html">Spiritual Progression</a>
-    <a href="professional.html">Professional Growth</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Résumé</a>
-</nav>
+    .logo-section img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid white;
+    }
 
-<div class="container">
-    <h2>About This Portfolio</h2>
-    <p>
-        This site highlights my journey as a student at Ensign College, documenting both my 
-        <strong>Spiritual Progression</strong> and <strong>Professional Growth</strong>. 
-        It reflects my commitment to becoming a disciple‑leader who strives to learn, serve, and grow in every aspect of life.
-    </p>
+    .logo-text {
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
 
-    <h2>What You Will Find Here</h2>
-    <ul>
-        <li><strong>Spiritual Progression Portfolio</strong> – reflections, Christlike attributes, and personal development.</li>
-        <li><strong>Professional Growth Portfolio</strong> – skills, goals, and evidence of learning.</li>
-        <li><strong>Projects & Ethical Dilemma</strong> – real‑world applications and decision‑making.</li>
-        <li><strong>Résumé</strong> – education, experience, and qualifications.</li>
-    </ul>
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
-    <p>Thank you for visiting. I hope this portfolio gives you a clear view of my growth, values, and aspirations.</p>
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+    .search-icon {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* DROPDOWN MENU */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        min-width: 180px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        border-radius: 6px;
+        z-index: 1000;
+    }
+
+    .dropdown-content a {
+        color: #1e3a8a;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-weight: bold;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #e5e7eb;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* SEARCH BAR */
+    #searchBar {
+        display: none;
+        width: 90%;
+        margin: 15px auto;
+        padding: 10px;
+        border: 2px solid #1e3a8a;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+</style>
+
+<!-- HEADER -->
+<div class="topnav">
+    <div class="logo-section">
+        <img src="yourphoto.jpg" alt="Profile Photo">
+        <div class="logo-text">Mandizvidza</div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="spiritual.html">Spiritual</a>
+        <a href="professional.html">Professional</a>
+        <a href="projects.html">Projects</a>
+
+        <!-- DROPDOWN MENU -->
+        <div class="dropdown">
+            <button class="dropdown-btn">More ▼</button>
+            <div class="dropdown-content">
+                <a href="resume.html">Résumé</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
+    </div>
 </div>
 
-<footer>
-    © 2026 Mandizvidza | Ensign College Portfolio
-</footer>
+<!-- SEARCH BAR -->
+<input type="text" id="searchBar" placeholder="Search this page..." onkeyup="searchPage()">
 
-</body>
-</html>
+<script>
+function toggleSearch() {
+    let bar = document.getElementById("searchBar");
+    bar.style.display = (bar.style.display === "none" || bar.style.display === "") ? "block" : "none";
+}
+
+function searchPage() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let bodyText = document.body.innerText.toLowerCase();
+
+    if (input.length > 2) {
+        if (bodyText.includes(input)) {
+            console.log("Match found");
+        } else {
+            console.log("No match");
+        }
+    }
+}
+</script>
+
+<!-- FONT AWESOME ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
