@@ -1,38 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Résumé | Mandizvidza</title>
-
-  <!-- Blue & White Theme -->
-  <style>
+<!-- TOP NAVIGATION BAR WITH PHOTO + SEARCH ICON + DROPDOWN -->
+<style>
     body {
-      background-color: #ffffff;
-      color: #003366;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f9fc;
     }
-    nav {
-      background-color: #003366;
-      padding: 10px;
+
+    .topnav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1e3a8a;
+        padding: 12px 30px;
+        color: white;
     }
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      margin-right: 15px;
-      font-weight: bold;
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
     }
-    nav a:hover {
-      text-decoration: underline;
+
+    .logo-section img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid white;
     }
-    hr {
-      border: 0;
-      border-top: 2px solid #003366;
-      margin-bottom: 20px;
+
+    .logo-text {
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
     }
-    h1, h2, h3 {
-      color: #003366;
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+    .search-icon {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* DROPDOWN MENU */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        min-width: 180px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        border-radius: 6px;
+        z-index: 1000;
+    }
+
+    .dropdown-content a {
+        color: #1e3a8a;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-weight: bold;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #e5e7eb;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* SEARCH BAR */
+    #searchBar {
+        display: none;
+        width: 90%;
+        margin: 15px auto;
+        padding: 10px;
+        border: 2px solid #1e3a8a;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+</style>
+
+<!-- HEADER -->
+<div class="topnav">
+    <div class="logo-section">
+        <img src="
+WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
+        <div class="logo-text">Clergy Mandizvidza</div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="spiritual.html">Spiritual</a>
+        <a href="professional.html">Professional</a>
+        <a href="projects.html">Projects</a>
+
+        <!-- DROPDOWN MENU -->
+        <div class="dropdown">
+            <button class="dropdown-btn">More ▼</button>
+            <div class="dropdown-content">
+                <a href="resume.html">Résumé</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
+    </div>
+</div>
+
+<!-- SEARCH BAR -->
+<input type="text" id="searchBar" placeholder="Search this page..." onkeyup="searchPage()">
+
+<script>
+function toggleSearch() {
+    let bar = document.getElementById("searchBar");
+    bar.style.display = (bar.style.display === "none" || bar.style.display === "") ? "block" : "none";
+}
+
+function searchPage() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let bodyText = document.body.innerText.toLowerCase();
+
+    if (input.length > 2) {
+        if (bodyText.includes(input)) {
+            console.log("Match found");
+        } else {
+            console.log("No match");
+        }
+    }
+}
   </style>
 </head>
 
