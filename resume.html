@@ -1,243 +1,290 @@
-<!-- TOP NAVIGATION BAR WITH PHOTO + SEARCH ICON + DROPDOWN -->
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f7f9fc;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Résumé - Clergy Mandizvidza</title>
 
-    .topnav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #1e3a8a;
-        padding: 12px 30px;
-        color: white;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
 
-    .logo-section {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
+        /* HEADER */
+        .topnav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e3a8a;
+            padding: 12px 30px;
+            color: white;
+        }
 
-    .logo-section img {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid white;
-    }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    .logo-text {
-        font-size: 22px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
+        .logo-section img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
 
-    .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
 
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-    }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-    .nav-links a:hover {
-        text-decoration: underline;
-    }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-    .search-icon {
-        font-size: 20px;
-        cursor: pointer;
-    }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
 
-    /* DROPDOWN MENU */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
+        /* DROPDOWN */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-    .dropdown-btn {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+        .dropdown-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        right: 0;
-        background-color: white;
-        min-width: 180px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-        border-radius: 6px;
-        z-index: 1000;
-    }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 6px;
+            z-index: 1000;
+        }
 
-    .dropdown-content a {
-        color: #1e3a8a;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        font-weight: bold;
-    }
+        .dropdown-content a {
+            color: #1e3a8a;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
 
-    .dropdown-content a:hover {
-        background-color: #e5e7eb;
-    }
+        .dropdown-content a:hover {
+            background-color: #e5e7eb;
+        }
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-    /* SEARCH BAR */
-    #searchBar {
-        display: none;
-        width: 90%;
-        margin: 15px auto;
-        padding: 10px;
-        border: 2px solid #1e3a8a;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-</style>
+        /* HERO BANNER */
+        .hero {
+            background: url('itbanner.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        h3 {
+            color: #1e3a8a;
+            margin-top: 25px;
+        }
+
+        a {
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 2px solid #1e3a8a;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
 
 <!-- HEADER -->
 <div class="topnav">
     <div class="logo-section">
-        <img src="
-WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
+        <img src="WhatsApp Image 2026-05-23 at 17.40.05 (2).jpg" alt="Profile Photo">
         <div class="logo-text">Clergy Mandizvidza</div>
     </div>
 
     <div class="nav-links">
         <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="professional.html">Professional Goals</a>
         <a href="spiritual.html">Spiritual</a>
-        <a href="professional.html">Professional</a>
-        <a href="projects.html">Projects</a>
 
-        <!-- DROPDOWN MENU -->
         <div class="dropdown">
             <button class="dropdown-btn">More ▼</button>
             <div class="dropdown-content">
+                <a href="projects.html">Projects</a>
                 <a href="resume.html">Résumé</a>
-                <a href="aboutme.html">About Me</a>
                 <a href="contact.html">Contact</a>
             </div>
         </div>
-
-        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
     </div>
 </div>
 
-<!-- SEARCH BAR -->
-<input type="text" id="searchBar" placeholder="Search this page..." onkeyup="searchPage()">
+<!-- HERO -->
+<div class="hero">
+    <h1>Contact & Résumé</h1>
+    <p>Let’s connect — technology, engineering, leadership, and lifelong learning.</p>
+</div>
 
-<script>
-function toggleSearch() {
-    let bar = document.getElementById("searchBar");
-    bar.style.display = (bar.style.display === "none" || bar.style.display === "") ? "block" : "none";
-}
+<!-- MAIN CONTENT -->
+<div class="container">
 
-function searchPage() {
-    let input = document.getElementById("searchBar").value.toLowerCase();
-    let bodyText = document.body.innerText.toLowerCase();
+    <h2>Welcome</h2>
+    <p>
+        Thank you for visiting my Professional Growth and Spiritual Progression Portfolio.  
+        I am passionate about Information Technology, engineering, leadership, and continuous learning.  
+        I welcome opportunities to connect with professionals, mentors, employers, and fellow students.
+    </p>
 
-    if (input.length > 2) {
-        if (bodyText.includes(input)) {
-            console.log("Match found");
-        } else {
-            console.log("No match");
-        }
-    }
-}
-  </style>
-</head>
-
-<body>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="spiritual.html">Spiritual Progression</a> |
-    <a href="professional.html">Professional Growth</a> |
-    <a href="projects.html">Projects</a> |
-    <a href="resume.html">Résumé</a>
-  </nav>
-  <hr>
-
-  <h1>Résumé</h1>
-
-  <h2>Professional Summary</h2>
-  <p>
-    Dedicated and ethical IT professional with experience in technical support, electrical systems,
-    troubleshooting, and documentation. Skilled in diagnosing hardware/software issues, improving system
-    performance, and communicating technical information clearly. Committed to integrity, continuous learning,
-    and Christlike leadership in all professional interactions.
-  </p>
-
-  <h2>Core Competencies</h2>
-  <ul>
-    <li>Technical troubleshooting (hardware & software)</li>
-    <li>System diagnostics & optimisation</li>
-    <li>Technical and business writing</li>
-    <li>Documentation & reporting</li>
-    <li>User support & communication</li>
-    <li>Electrical systems & power distribution</li>
-    <li>Ethical decision‑making</li>
-    <li>Teamwork & collaboration</li>
-  </ul>
-
-  <h2>Technical Skills</h2>
-  <ul>
-    <li>Operating Systems: Windows, basic Linux</li>
-    <li>Hardware: Laptops, desktops, components</li>
-    <li>Software: Productivity tools, diagnostic utilities</li>
-    <li>Networking: Basic configuration & fault isolation</li>
-    <li>Writing: Documentation, transactional writing, business communication</li>
-  </ul>
-
-  <h2>Professional Experience</h2>
-
-  <h3>IT Troubleshooting & Systems Support</h3>
-  <p><em>Independent / Volunteer Work</em></p>
-  <ul>
-    <li>Diagnosed and resolved hardware and software issues for multiple users.</li>
-    <li>Improved system performance through updates, cleanup, and configuration.</li>
-    <li>Explained technical issues clearly and respectfully to non‑technical users.</li>
-    <li>Strengthened analytical and communication skills through hands‑on problem solving.</li>
-  </ul>
-
-  <h3>Electrical & Power Distribution Technician</h3>
-  <p><em>Overhead & Underground Powerline Maintenance</em></p>
-  <ul>
-    <li>Performed maintenance on overhead and underground powerlines.</li>
-    <li>Applied safety procedures, troubleshooting methods, and system reliability practices.</li>
-    <li>Responded to faults and emergencies, restoring power efficiently.</li>
-    <li>Developed resilience, precision, and calm decision‑making under pressure.</li>
-  </ul>
-
-  <h2>Education</h2>
-  <p>Ensign College — Technical Writing & Professional Development coursework.</p>
-
-  <h2>Certifications</h2>
-  <ul>
-    <li>18th Edition (BS7671) Electrical Certification</li>
-  </ul>
-<!-- Footer -->
     <hr>
-  <footer style="text-align:center; padding:15px; color:#003366; font-size:14px;">
-    © 2026 Mandizvidza • cmandie.github.io • Built with purpose, integrity, and discipleship
-  </footer>
+
+    <h2>Professional Profile</h2>
+    <p><strong>Information Technology System Administration Student</strong></p>
+
+    <h3>Areas of Interest</h3>
+    <ul>
+        <li>Technical Support & Troubleshooting</li>
+        <li>System Administration</li>
+        <li>Networking & Cloud Computing</li>
+        <li>Electrical & Power Systems</li>
+        <li>Renewable Energy Technology</li>
+        <li>Data Management & SQL</li>
+        <li>Project Coordination</li>
+        <li>Professional Development</li>
+    </ul>
+
+    <hr>
+
+    <h2>Download My Résumé</h2>
+    <p>You can view or download my most recent résumé using the link below:</p>
+
+    <p>
+        <a href="https://docs.google.com/document/d/1HXjnuKzsiKZ5mhYbGrDU3VC6_XQoPQ3z/edit?usp=sharing" target="_blank">
+            📄 View My Résumé
+        </a>
+    </p>
+
+    <hr>
+
+    <h2>Professional Networking</h2>
+    <p>Connect with me on LinkedIn:</p>
+
+    <p>
+        <a href="https://www.linkedin.com/in/clergy-mandizvidza" target="_blank">
+            🔗 linkedin.com/in/clergy-mandizvidza
+        </a>
+    </p>
+
+    <p>
+        Building meaningful professional relationships is an important part of my growth as an IT and engineering professional.
+    </p>
+
+    <hr>
+
+    <h2>Career Objective</h2>
+    <p>
+        My goal is to build a successful career in Information Technology while maintaining strong values of integrity, accountability, service, and continuous learning.  
+        I aim to contribute to organizations by providing reliable technology solutions, supporting users, and helping teams achieve their goals through effective use of technology.
+    </p>
+
+    <hr>
+
+    <h2>Thank You</h2>
+    <p>
+        Thank you for taking the time to review my portfolio.  
+        This portfolio represents my academic achievements, engineering background, IT development, and commitment to becoming a capable and trusted professional.
+    </p>
+
+</div>
+
+<footer>
+    © 2026 Clergy Mandizvidza — All Rights Reserved
+</footer>
 
 </body>
 </html>
