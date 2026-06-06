@@ -1,121 +1,188 @@
-<!-- TOP NAVIGATION BAR WITH PHOTO + SEARCH ICON + DROPDOWN -->
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f7f9fc;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clergy Mandizvidza – Portfolio</title>
 
-    .topnav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #1e3a8a;
-        padding: 12px 30px;
-        color: white;
-    }
+    <!-- GLOBAL STYLES -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
 
-    .logo-section {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
+        /* HEADER */
+        .topnav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e3a8a;
+            padding: 12px 30px;
+            color: white;
+        }
 
-    .logo-section img {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid white;
-    }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    .logo-text {
-        font-size: 22px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
+        .logo-section img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
 
-    .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
 
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-    }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-    .nav-links a:hover {
-        text-decoration: underline;
-    }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-    .search-icon {
-        font-size: 20px;
-        cursor: pointer;
-    }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
 
-    /* DROPDOWN MENU */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
+        .search-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
 
-    .dropdown-btn {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+        /* DROPDOWN */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        right: 0;
-        background-color: white;
-        min-width: 180px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-        border-radius: 6px;
-        z-index: 1000;
-    }
+        .dropdown-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-    .dropdown-content a {
-        color: #1e3a8a;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        font-weight: bold;
-    }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 6px;
+            z-index: 1000;
+        }
 
-    .dropdown-content a:hover {
-        background-color: #e5e7eb;
-    }
+        .dropdown-content a {
+            color: #1e3a8a;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+        .dropdown-content a:hover {
+            background-color: #e5e7eb;
+        }
 
-    /* SEARCH BAR */
-    #searchBar {
-        display: none;
-        width: 90%;
-        margin: 15px auto;
-        padding: 10px;
-        border: 2px solid #1e3a8a;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-</style>
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* SEARCH BAR */
+        #searchBar {
+            display: none;
+            width: 90%;
+            margin: 15px auto;
+            padding: 10px;
+            border: 2px solid #1e3a8a;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* HERO BANNER */
+        .hero {
+            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 2px solid #1e3a8a;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
 
 <!-- HEADER -->
 <div class="topnav">
     <div class="logo-section">
-        <img src="
-WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
+        <img src="profile.jpg" alt="Profile Photo">
         <div class="logo-text">Clergy Mandizvidza</div>
     </div>
 
@@ -125,7 +192,6 @@ WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
         <a href="professional.html">Professional</a>
         <a href="projects.html">Projects</a>
 
-        <!-- DROPDOWN MENU -->
         <div class="dropdown">
             <button class="dropdown-btn">More ▼</button>
             <div class="dropdown-content">
@@ -142,6 +208,79 @@ WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
 <!-- SEARCH BAR -->
 <input type="text" id="searchBar" placeholder="Search this page..." onkeyup="searchPage()">
 
+<!-- HERO BANNER -->
+<div class="hero">
+    <h1>Clergy Mandizvidza</h1>
+    <h2>Aspiring IT Professional | Cloud & Data Enthusiast | Disciple‑Leader</h2>
+    <p>
+        Building a meaningful career in Information Technology while staying grounded in faith, integrity, 
+        service, and continuous learning.
+    </p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <h2>Welcome to My Professional Growth and Spiritual Progression Portfolio</h2>
+
+    <p>
+        My name is <strong>Clergy Mandizvidza</strong>, and I am currently pursuing studies in 
+        <strong>Information Technology System Administration</strong> at Ensign College.
+    </p>
+
+    <p>
+        This portfolio represents my journey of <strong>academic development</strong>, 
+        <strong>professional advancement</strong>, and <strong>spiritual growth</strong> as I work toward becoming 
+        a well‑rounded IT professional and a disciple‑leader grounded in faith.
+    </p>
+
+    <p>
+        My background spans <strong>engineering, electrical systems, renewable energy, cloud computing, and data analytics</strong>. 
+        These experiences have shaped the way I approach learning, problem‑solving, and service.
+    </p>
+
+    <p>
+        My goal is to build a meaningful career in Information Technology while upholding values of 
+        <strong>integrity, accountability, service, and continuous improvement</strong>.
+    </p>
+
+    <hr>
+
+    <h2>My Guiding Principles</h2>
+
+    <h3>Faith in Jesus Christ</h3>
+    <p>I rely on the Lord’s guidance as I pursue my education, career, and personal development.</p>
+
+    <h3>Integrity and Accountability</h3>
+    <p>I strive to be honest, responsible, and dependable in all aspects of my work and discipleship.</p>
+
+    <h3>Service Through Knowledge and Leadership</h3>
+    <p>I aim to use my skills to support others, solve problems, and make a positive impact in my community and future workplace.</p>
+
+    <hr>
+
+    <h2>Portfolio Sections</h2>
+    <ul>
+        <li>About Me</li>
+        <li>Professional Goals</li>
+        <li>Spiritual Progression Portfolio</li>
+        <li>Professional Growth Portfolio</li>
+        <li>Projects</li>
+        <li>Certifications and Skills</li>
+        <li>Reflections</li>
+        <li>Contact Information</li>
+    </ul>
+
+    <hr>
+
+    <p><strong>Thank you for visiting my portfolio.</strong></p>
+
+</div>
+
+<footer>
+    © 2026 Clergy Mandizvidza — All Rights Reserved
+</footer>
+
 <script>
 function toggleSearch() {
     let bar = document.getElementById("searchBar");
@@ -153,14 +292,10 @@ function searchPage() {
     let bodyText = document.body.innerText.toLowerCase();
 
     if (input.length > 2) {
-        if (bodyText.includes(input)) {
-            console.log("Match found");
-        } else {
-            console.log("No match");
-        }
+        console.log(bodyText.includes(input) ? "Match found" : "No match");
     }
 }
 </script>
 
-<!-- FONT AWESOME ICONS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</body>
+</html>
