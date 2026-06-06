@@ -119,12 +119,28 @@
             font-size: 16px;
         }
 
-        /* HERO BANNER */
+        /* HERO BANNER — USING index.jpeg */
         .hero {
-            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+            background: url('index.jpeg') center/cover no-repeat;
             color: white;
             padding: 80px 20px;
             text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero h1, .hero h2, .hero p {
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
@@ -224,24 +240,24 @@
     <h2>Welcome to My Professional Growth and Spiritual Progression Portfolio</h2>
 
     <p>
-        My name is <strong>Clergy Mandizvidza</strong>, and I am currently pursuing studies in 
-        <strong>Information Technology System Administration</strong> at Ensign College.
+        My name is Clergy Mandizvidza, and I am currently pursuing studies in 
+        Information Technology System Administration at Ensign College.
     </p>
 
     <p>
-        This portfolio represents my journey of <strong>academic development</strong>, 
-        <strong>professional advancement</strong>, and <strong>spiritual growth</strong> as I work toward becoming 
+        This portfolio represents my journey of academic development, 
+        professional advancement, and spiritual growth as I work toward becoming 
         a well‑rounded IT professional and a disciple‑leader grounded in faith.
     </p>
 
     <p>
-        My background spans <strong>engineering, electrical systems, renewable energy, cloud computing, and data analytics</strong>. 
+        My background spans engineering, electrical systems, renewable energy, cloud computing, and data analytics. 
         These experiences have shaped the way I approach learning, problem‑solving, and service.
     </p>
 
     <p>
         My goal is to build a meaningful career in Information Technology while upholding values of 
-        <strong>integrity, accountability, service, and continuous improvement</strong>.
+        integrity, accountability, service, and continuous improvement.
     </p>
 
     <hr>
