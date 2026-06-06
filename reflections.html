@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflections - Clergy Mandizvidza</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        /* HEADER */
+        .topnav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e3a8a;
+            padding: 12px 30px;
+            color: white;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-section img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: #1e3a8a;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #e5e7eb;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* HERO BANNER */
+        .hero {
+            background: url('itbanner.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        h3 {
+            color: #1e3a8a;
+            margin-top: 25px;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 2px solid #1e3a8a;
+        }
+
+        ul {
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="topnav">
+    <div class="logo-section">
+        <img src="profile.jpg" alt="Profile Photo">
+        <div class="logo-text">Clergy Mandizvidza</div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="professional.html">Professional Goals</a>
+        <a href="spiritual.html">Spiritual</a>
+
+        <div class="dropdown">
+            <button class="dropdown-btn">More ▼</button>
+            <div class="dropdown-content">
+                <a href="projects.html">Projects</a>
+                <a href="resume.html">Résumé</a>
+                <a href="contact.html">Contact</a>
+                <a href="reflections.html">Reflections</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Reflections</h1>
+    <p>Insights from my spiritual, academic, and professional journey.</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <h2>Reflection 1: Beginning My Portfolio Journey</h2>
+    <p>
+        When I began building this portfolio, I viewed it as a simple academic requirement. Over time, it became a mirror of my growth — academically, spiritually, and professionally.  
+        Reviewing my engineering background, IT projects, and personal experiences helped me recognize how each step has shaped my identity and future goals.
+    </p>
+    <p>
+        This process taught me to evaluate my strengths, acknowledge areas for improvement, and appreciate the progress I often overlook in daily life.
+    </p>
+
+    <hr>
+
+    <h2>Reflection 2: Faith and Professional Growth</h2>
+    <p>
+        My journey has shown me that faith and professional development are deeply connected.  
+        The same principles that guide my spiritual life — trust, integrity, humility, and service — influence how I approach technology, teamwork, and problem‑solving.
+    </p>
+    <p>
+        Faith gives me direction. Integrity shapes my decisions. Service reminds me that technology exists to bless people, not just systems.
+    </p>
+
+    <hr>
+
+    <h2>Reflection 3: Agency and Personal Responsibility</h2>
+    <p>
+        I have learned that growth requires initiative. Whether studying cloud computing, troubleshooting systems, or improving my engineering knowledge, progress comes when I take responsibility for my learning.
+    </p>
+    <p>
+        Agency means acting with purpose — not waiting for opportunities, but preparing for them.  
+        This mindset has helped me stay focused and proactive in my education and career preparation.
+    </p>
+
+    <hr>
+
+    <h2>Reflection 4: Ethical Decision‑Making in Technology</h2>
+    <p>
+        Working with technology means working with trust.  
+        Whether handling data, configuring systems, or supporting users, ethical behavior is essential.
+    </p>
+    <p>
+        I have learned that technical skill alone is not enough. A trustworthy IT professional must protect privacy, respect boundaries, and act with integrity.
+    </p>
+
+    <h3>Ethical Dilemma Analysis</h3>
+    <p><strong>Issue:</strong> Misuse of administrator privileges and unauthorized access to confidential information.</p>
+
+    <h3>Ethical Principles Involved</h3>
+    <ul>
+        <li>Integrity</li>
+        <li>Accountability</li>
+        <li>Privacy</li>
+        <li>Professional Responsibility</li>
+        <li>Honesty</li>
+    </ul>
+
+    <h3>Better Approach</h3>
+    <ul>
+        <li>Role‑based access controls</li>
+        <li>Audit logs and monitoring</li>
+        <li>Ethics and security training</li>
+        <li>Clear accountability structures</li>
+    </ul>
+
+    <p>
+        This experience taught me that ethical values and technical controls must work together to protect systems and people.
+    </p>
+
+    <hr>
+
+    <h2>Reflection on Temple and Personal Reflection Experience</h2>
+    <p>
+        During my personal reflection time, I focused on my educational journey, engineering background, and transition into IT.  
+        I felt gratitude for the opportunities that have shaped me and the guidance I have received through faith.
+    </p>
+    <p>
+        This experience reminded me that true success is not only about skills — it is about character, purpose, and service.
+    </p>
+
+    <hr>
+
+    <h2>Looking Forward</h2>
+    <p>
+        As I continue my studies and prepare for a career in Information Technology, I want to remain committed to lifelong learning, ethical leadership, and service.  
+        My goal is to become a skilled IT professional who uplifts others through integrity, faith, and responsible use of technology.
+    </p>
+
+</div>
+
+<footer>
+    © 2026 Clergy Mandizvidza — All Rights Reserved
+</footer>
+
+</body>
+</html>
