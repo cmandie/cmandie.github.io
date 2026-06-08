@@ -102,7 +102,7 @@
             display: block;
         }
 
-        /* HERO BANNER */
+        /* HERO */
         .hero {
             background: url('itbanner.jpg') center/cover no-repeat;
             color: white;
@@ -246,15 +246,21 @@
         <p>You can message me directly on WhatsApp using the button below.</p>
         <p>
             <a href="https://wa.me/447458676460" target="_blank" style="
-                background-color: #25D366;
+                background-color: #1e3a8a;
                 color: white;
-                padding: 10px 18px;
-                border-radius: 6px;
+                padding: 10px 16px;
+                border-radius: 50px;
                 text-decoration: none;
                 font-weight: bold;
-                display: inline-block;
-            ">
-                Message Me on WhatsApp
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                transition: 0.3s;
+            "
+            onmouseover="this.style.backgroundColor='#163075'"
+            onmouseout="this.style.backgroundColor='#1e3a8a'">
+                <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
+                WhatsApp Me
             </a>
         </p>
     </div>
