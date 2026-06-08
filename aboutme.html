@@ -51,3 +51,298 @@
         .nav-links a {
             color: white;
             text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .search-icon {
+            font-size: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        #searchBar {
+            display: none;
+            width: 90%;
+            margin: 15px auto;
+            padding: 10px;
+            border: 2px solid #1e3a8a;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* DROPDOWN MENU */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1e3a8a;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #163075;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* HERO BANNER */
+        .hero-banner {
+            width: 100%;
+            height: 300px;
+            background: url('itbanner.jpg') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero-text {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 2px solid #1e3a8a;
+        }
+    </style>
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="topnav">
+    <div class="logo-section">
+        <img src="WhatsApp Image 2026-05-23 at 17.40.05 (2).jpeg">
+        <div class="logo-text">Clergy Mandizvidza</div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+
+        <!-- DROPDOWN MENU -->
+        <div class="dropdown">
+            <button class="dropbtn">Portfolio <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="spiritual.html">Spiritual Progression</a>
+                <a href="professional.html">Professional Growth</a>
+                <a href="projects.html">Projects</a>
+                <a href="resume.html">Résumé</a>
+            </div>
+        </div>
+
+        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
+    </div>
+</div>
+
+<!-- HERO BANNER -->
+<div class="hero-banner">
+    <div class="hero-text">
+        <h1>About Me</h1>
+        <p>My journey of growth, purpose, and continuous learning</p>
+    </div>
+</div>
+
+<!-- SEARCH BAR -->
+<input type="text" id="searchBar" placeholder="Search this page..." onkeyup="searchPage()">
+
+<script>
+function toggleSearch() {
+    let bar = document.getElementById("searchBar");
+    bar.style.display = (bar.style.display === "none" || bar.style.display === "") ? "block" : "none";
+}
+
+function searchPage() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let bodyText = document.body.innerText.toLowerCase();
+
+    if (input.length > 2) {
+        if (bodyText.includes(input)) {
+            console.log("Match found");
+        } else {
+            console.log("No match");
+        }
+    }
+}
+</script>
+
+<!-- ABOUT ME CONTENT -->
+<div class="container">
+
+    <h2>About Me</h2>
+    <p>
+        My name is Clergy Mandizvidza, and I am an aspiring IT professional with a diverse technical background that spans 
+        engineering, electrical systems, renewable energy, cloud computing, and data analytics. Before transitioning into Information 
+        Technology, I worked in electrical engineering and renewable energy, gaining hands‑on experience with power systems, 
+        energy technologies, and field operations. This foundation strengthened my problem‑solving abilities, discipline, and confidence 
+        in working with complex systems.
+    </p>
+
+    <p>
+        As I expanded into IT, I developed practical skills in AWS cloud computing, SQL data querying, Power BI, and Tableau. 
+        These tools have helped me understand how data drives decision‑making and how cloud platforms support modern infrastructure. 
+        I enjoy troubleshooting, building solutions, and learning how different technologies connect to create efficient systems.
+    </p>
+
+    <p>
+        My journey reflects a commitment to continuous learning and personal growth. Whether working with electrical installations or 
+        cloud environments, I approach every challenge with curiosity, patience, and a desire to improve. My faith plays a central role 
+        in shaping my character, guiding me to act with integrity, humility, and purpose in everything I do.
+    </p>
+
+    <hr>
+
+    <h2>Education</h2>
+
+    <h3>Ensign College — United States</h3>
+    <p><em>Information Technology – System Administration</em></p>
+    <ul>
+        <li>AWS Cloud Computing</li>
+        <li>SQL & Database Fundamentals</li>
+        <li>Data Analytics (Power BI, Tableau)</li>
+        <li>Networking & Operating Systems</li>
+        <li>IT Support & Troubleshooting</li>
+        <li>Systems Administration</li>
+    </ul>
+
+    <h3>Chinhoyi University of Technology — Zimbabwe</h3>
+    <p><em>Bachelor of Engineering (Honours) in Fuels and Energy Engineering</em></p>
+    <ul>
+        <li>Power Systems</li>
+        <li>Renewable Energy Technologies</li>
+        <li>Thermodynamics & Energy Conversion</li>
+        <li>Electrical Machines</li>
+        <li>Energy Efficiency & Sustainability</li>
+        <li>Engineering Mathematics & Applied Sciences</li>
+    </ul>
+
+    <h3>Professional Certification</h3>
+    <p><strong>18th Edition (BS7671) Electrical Certification — United Kingdom</strong></p>
+    <ul>
+        <li>Qualified in electrical installation safety standards</li>
+        <li>Knowledge of wiring regulations, inspection, and testing</li>
+        <li>Competent in safe electrical practices and compliance</li>
+    </ul>
+
+    <hr>
+
+    <h2>Core Values</h2>
+    <ul>
+        <li><strong>Integrity</strong> — staying honest and dependable in all situations</li>
+        <li><strong>Growth</strong> — embracing challenges as opportunities to learn</li>
+        <li><strong>Service</strong> — using my skills to uplift and support others</li>
+        <li><strong>Faith</strong> — trusting God’s guidance in my journey</li>
+        <li><strong>Respect</strong> — treating everyone with dignity and kindness</li>
+    </ul>
+
+    <!-- BLUE WHATSAPP ICON BUTTON -->
+    <p>
+        <a href="https://wa.me/447458676460" target="_blank" style="
+            background-color: #1e3a8a;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        "
+        onmouseover="this.style.backgroundColor='#163075'"
+        onmouseout="this.style.backgroundColor='#1e3a8a'">
+            <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
+            WhatsApp Me
+        </a>
+    </p>
+
+    <hr>
+
+    <h2>Career Vision</h2>
+    <p>
+        I am working toward a career in:
+    </p>
+    <ul>
+        <li>Cloud Computing</li>
+        <li>Technical Support</li>
+        <li>System Administration</li>
+        <li>Data Analytics</li>
+        <li>IT Operations</li>
+        <li>Renewable‑Energy‑Integrated IT Systems</li>
+    </ul>
+
+    <p>
+        My long‑term goal is to become a skilled professional who can troubleshoot complex issues, manage cloud environments, work 
+        confidently with data, and contribute to building secure, efficient systems that support both technology and sustainability.
+    </p>
+
+</div>
+
+</body>
+</html>
