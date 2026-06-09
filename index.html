@@ -5,262 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clergy Mandizvidza – Portfolio</title>
 
-    <!-- GLOBAL STYLES -->
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f7f9fc;
-            color: #333;
+            background-color: #f4f8ff;
+            color: #222;
+            line-height: 1.6;
         }
 
-        /* HEADER */
-        .topnav {
+        /* NAVIGATION BAR */
+        nav {
+            background-color: #0a3d91;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #1e3a8a;
-            padding: 12px 30px;
+        }
+
+        nav .logo {
             color: white;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-section img {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid white;
-        }
-
-        .logo-text {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            letter-spacing: 1px;
         }
 
-        .nav-links {
+        nav ul {
+            list-style: none;
             display: flex;
-            align-items: center;
             gap: 20px;
+            margin: 0;
+            padding: 0;
         }
 
-        .nav-links a {
+        nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
-            font-size: 16px;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        .search-icon {
-            font-size: 20px;
-            cursor: pointer;
         }
 
         /* DROPDOWN */
         .dropdown {
             position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
-            right: 0;
-            background-color: white;
-            min-width: 180px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-            border-radius: 6px;
-            z-index: 1000;
+            background-color: #0a3d91;
+            min-width: 160px;
+            border-radius: 4px;
+            z-index: 10;
         }
 
         .dropdown-content a {
-            color: #1e3a8a;
-            padding: 12px 16px;
-            text-decoration: none;
             display: block;
-            font-weight: bold;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
         }
 
         .dropdown-content a:hover {
-            background-color: #e5e7eb;
+            background-color: #062a63;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
         }
 
-        /* SEARCH BAR */
-        #searchBar {
-            display: none;
-            width: 90%;
-            margin: 15px auto;
-            padding: 10px;
-            border: 2px solid #1e3a8a;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        /* HERO BANNER — USING index.jpeg */
-        .hero {
-            background: url('index.jpg') center/cover no-repeat;
+        /* HERO SECTION */
+        header {
+            background-color: #0a3d91;
             color: white;
-            padding: 80px 20px;
+            padding: 40px 20px;
             text-align: center;
-            position: relative;
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.45);
-        }
-
-        .hero h1, .hero h2, .hero p {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .hero h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            font-weight: normal;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* MAIN CONTENT */
+        /* CONTENT BOX */
         .container {
+            width: 90%;
             max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         h2 {
-            color: #1e3a8a;
+            color: #0a3d91;
+            border-left: 5px solid #0a3d91;
+            padding-left: 10px;
         }
 
-        hr {
-            margin: 30px 0;
-            border: 0;
-            border-top: 2px solid #1e3a8a;
-        }
-
-        /* FOOTER */
         footer {
+            background-color: #0a3d91;
+            color: white;
             text-align: center;
             padding: 20px;
-            background-color: #1e3a8a;
-            color: white;
             margin-top: 40px;
         }
     </style>
-
-    <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="topnav">
-    <div class="logo-section">
-        <img src="WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
-        <div class="logo-text">Clergy Mandizvidza</div>
-    </div>
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">Clergy Mandizvidza</div>
 
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="spiritual.html">Spiritual</a>
-        <a href="professional.html">Professional</a>
-        <a href="projects.html">Projects</a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="spiritual.html">Spiritual</a></li>
+        <li><a href="professional.html">Professional</a></li>
+        <li><a href="projects.html">Projects</a></li>
 
-        <div class="dropdown">
-            <button class="dropdown-btn">More ▼</button>
+        <!-- ⭐ WEEK 5 ADDED HERE ⭐ -->
+        <li><a href="week5.html">Week 5</a></li>
+
+        <li class="dropdown">
+            <a href="#" class="dropbtn">More ▼</a>
             <div class="dropdown-content">
-                <a href="resume.html">Résumé</a>
                 <a href="aboutme.html">About Me</a>
                 <a href="contact.html">Contact</a>
+                <a href="resume.html">Résumé</a>
             </div>
-        </div>
+        </li>
+    </ul>
+</nav>
 
-        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
-    </div>
-</div>
-
-<!-- SEARCH BAR -->
-<input type="text" id="searchBar" placeholder="Search this page..." onkeyup="searchPage()">
-
-<!-- HERO BANNER -->
-<div class="hero">
-    <h1>Clergy Mandizvidza</h1>
-    <h2>Aspiring IT Professional | Cloud & Data Enthusiast | Disciple‑Leader</h2>
-    <p>
-        Building a meaningful career in Information Technology while staying grounded in faith, integrity, 
-        service, and continuous learning.
-    </p>
-</div>
+<!-- HERO -->
+<header>
+    <h1>Aspiring IT Professional | Cloud & Data Enthusiast | Disciple‑Leader</h1>
+    <p>Welcome to My Professional Growth and Spiritual Progression Portfolio</p>
+</header>
 
 <!-- MAIN CONTENT -->
 <div class="container">
 
-    <h2>Welcome to My Professional Growth and Spiritual Progression Portfolio</h2>
-
+    <h2>Welcome</h2>
     <p>
-        My name is Clergy Mandizvidza, and I am currently pursuing studies in 
-        Information Technology System Administration at Ensign College.
+        My name is Clergy Mandizvidza, and I am currently pursuing studies in Information Technology System Administration at Ensign College. This portfolio represents my journey of academic development, professional advancement, and spiritual growth as I work toward becoming a well‑rounded IT professional and a disciple‑leader grounded in faith.
     </p>
 
     <p>
-        This portfolio represents my journey of academic development, 
-        professional advancement, and spiritual growth as I work toward becoming 
-        a well‑rounded IT professional and a disciple‑leader grounded in faith.
+        My background spans engineering, electrical systems, renewable energy, cloud computing, and data analytics. These experiences have shaped the way I approach learning, problem‑solving, and service. My goal is to build a meaningful career in Information Technology while upholding values of integrity, accountability, service, and continuous improvement.
     </p>
-
-    <p>
-        My background spans engineering, electrical systems, renewable energy, cloud computing, and data analytics. 
-        These experiences have shaped the way I approach learning, problem‑solving, and service.
-    </p>
-
-    <p>
-        My goal is to build a meaningful career in Information Technology while upholding values of 
-        integrity, accountability, service, and continuous improvement.
-    </p>
-
-    <hr>
 
     <h2>My Guiding Principles</h2>
 
@@ -273,8 +162,6 @@
     <h3>Service Through Knowledge and Leadership</h3>
     <p>I aim to use my skills to support others, solve problems, and make a positive impact in my community and future workplace.</p>
 
-    <hr>
-
     <h2>Portfolio Sections</h2>
     <ul>
         <li>About Me</li>
@@ -285,33 +172,14 @@
         <li>Certifications and Skills</li>
         <li>Reflections</li>
         <li>Contact Information</li>
+        <li><strong>Week 5 – Integration & Reflection</strong></li>
     </ul>
-
-    <hr>
-
-    <p><strong>Thank you for visiting my portfolio.</strong></p>
 
 </div>
 
 <footer>
-    © 2026 Clergy Mandizvidza — All Rights Reserved
+    <p>© 2026 Clergy Mandizvidza — All Rights Reserved</p>
 </footer>
-
-<script>
-function toggleSearch() {
-    let bar = document.getElementById("searchBar");
-    bar.style.display = (bar.style.display === "none" || bar.style.display === "") ? "block" : "none";
-}
-
-function searchPage() {
-    let input = document.getElementById("searchBar").value.toLowerCase();
-    let bodyText = document.body.innerText.toLowerCase();
-
-    if (input.length > 2) {
-        console.log(bodyText.includes(input) ? "Match found" : "No match");
-    }
-}
-</script>
 
 </body>
 </html>
