@@ -73,13 +73,43 @@
             display: block;
         }
 
-        header {
-            background-color: #0a3d91;
+        /* HERO BANNER (same as homepage) */
+        .hero {
+            background: url('index.jpg') center/cover no-repeat;
             color: white;
-            padding: 40px 20px;
+            padding: 80px 20px;
             text-align: center;
+            position: relative;
         }
 
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* CONTENT BOX */
         .container {
             width: 90%;
             max-width: 900px;
@@ -137,9 +167,11 @@
     </ul>
 </nav>
 
-<header>
+<!-- HERO BANNER (added) -->
+<div class="hero">
     <h1>Week 5 – Integration, Reflection, and Design Enhancement</h1>
-</header>
+    <p>Spiritual Alignment • Professional Growth • Ethical Development</p>
+</div>
 
 <div class="container">
 
