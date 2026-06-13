@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clergy Mandizvidza – Portfolio</title>
+
+    <!-- GLOBAL STYLES -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        /* HEADER */
+        .topnav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e3a8a;
+            padding: 12px 30px;
+            color: white;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-section img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .search-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: #1e3a8a;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #e5e7eb;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* SEARCH BAR */
+        #searchBar {
+            display: none;
+            width: 90%;
+            margin: 15px auto;
+            padding: 10px;
+            border: 2px solid #1e3a8a;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* HERO BANNER */
+        .hero {
+            background: url('index.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero h1, .hero h2, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        h3 {
+            color: #1e3a8a;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 2px solid #1e3a8a;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="topnav">
+    <div class="logo-section">
+        <img src="WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
+        <div class="logo-text">Clergy Mandizvidza</div>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="spiritual.html">Spiritual</a>
+        <a href="professional.html">Professional</a>
+        <a href="projects.html">Projects</a>
+        <a href="week5.html">Week 5</a>
+
+        <div class="dropdown">
+            <button class="dropdown-btn">More ▼</button>
+            <div class="dropdown-content">
+                <a href="resume.html">Résumé</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="contact.html">Contact</a>
+                <a href="actionplan.html">Action Plan</a>
+                <a href="week6.html"><strong>Week 6</strong></a>
+            </div>
+        </div>
+
+        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
+    </div>
+</div>
+
+<!-- SEARCH BAR -->
+<input type="text" id="searchBar" placeholder="Search this page..." onkeyup="searchPage()">
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Week 6 – Finalization & Reflection</h1>
+    <h2>Bringing Together Spiritual and Professional Growth</h2>
+    <p>
+        This week focuses on completing your portfolios, reflecting on your journey, and preparing for presentation.
+    </p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <h2>Reflective Essay: Portfolio Alignment and Goal Evolution</h2>
+
+    <p>
+        As I reflect on the development of my Spiritual Progression Portfolio and Professional Growth Portfolio, 
+        I can see how both have become more than academic assignments—they have become a meaningful record of 
+        who I am becoming. When I began this course, my goals were clear but somewhat narrow: strengthen my 
+        writing, refine my professional identity, and articulate my spiritual foundations. Over time, these 
+        goals expanded and deepened as I recognized how interconnected my spiritual and professional growth 
+        truly are.
+    </p>
+
+    <p>
+        At first, I approached the portfolio with a focus on organization and presentation. However, as the 
+        weeks progressed, I found myself reflecting more intentionally on the principles that guide my life—faith, 
+        integrity, accountability, service, and continuous improvement. These principles became the thread that 
+        tied every section of my portfolio together. The more I wrote, the more I realized that my spiritual 
+        convictions are not separate from my professional ambitions; they shape the way I learn, lead, and serve. 
+        This alignment became clearer as I revised earlier sections, added personal stories, and integrated 
+        feedback from my peers.
+    </p>
+
+    <p>
+        My goals also evolved as I gained a deeper understanding of my strengths and areas for growth. Initially, 
+        I focused primarily on technical skills and career preparation. By the end of the course, I recognized 
+        the importance of becoming a disciple‑leader—someone who uses technical ability, ethical judgment, and 
+        spiritual grounding to uplift others. This shift broadened my vision of what success looks like. It is 
+        no longer just about securing a role in IT; it is about becoming a person who leads with compassion, 
+        clarity, and purpose.
+    </p>
+
+    <p>
+        The peer review process played a significant role in this evolution. The feedback I received encouraged 
+        me to strengthen my narrative, add more personal examples, and refine the structure of my portfolios. 
+        Implementing this feedback helped me see my work from a new perspective and pushed me to articulate my 
+        goals more clearly. It also reminded me that growth is collaborative—something I hope to carry into my 
+        future career.
+    </p>
+
+    <p>
+        Overall, my portfolios now reflect a more mature and integrated understanding of my spiritual and 
+        professional identity. They show where I have been, what I have learned, and who I am striving to become. 
+        Moving forward, I plan to continue updating them as I grow in discipleship, technical skill, and 
+        leadership. This course has helped me see that my development is ongoing, intentional, and deeply 
+        connected to my faith in Jesus Christ.
+    </p>
+
+    <hr>
+
+    <p><strong>Thank you for reviewing my Week 6 reflection.</strong></p>
+
+</div>
+
+<footer>
+    © 2026 Clergy Mandizvidza — All Rights Reserved
+</footer>
+
+<script>
+function toggleSearch() {
+    let bar = document.getElementById("searchBar");
+    bar.style.display = (bar.style.display === "none" || bar.style.display === "") ? "block" : "none";
+}
+
+function searchPage() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let bodyText = document.body.innerText.toLowerCase();
+
+    if (input.length > 2) {
+        console.log(bodyText.includes(input) ? "Match found" : "No match");
+    }
+}
+</script>
+
+</body>
+</html>
