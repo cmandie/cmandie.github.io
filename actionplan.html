@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Action Plan – Clergy Mandizvidza</title>
+    <title>Clergy Mandizvidza – Portfolio</title>
 
+    <!-- GLOBAL STYLES -->
     <style>
         body {
             margin: 0;
@@ -60,6 +61,11 @@
             text-decoration: underline;
         }
 
+        .search-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
         /* DROPDOWN */
         .dropdown {
             position: relative;
@@ -102,7 +108,18 @@
             display: block;
         }
 
-        /* HERO */
+        /* SEARCH BAR */
+        #searchBar {
+            display: none;
+            width: 90%;
+            margin: 15px auto;
+            padding: 10px;
+            border: 2px solid #1e3a8a;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* HERO BANNER */
         .hero {
             background: url('index.jpg') center/cover no-repeat;
             color: white;
@@ -121,15 +138,21 @@
             background: rgba(0,0,0,0.45);
         }
 
-        .hero h1, .hero p {
+        .hero h1, .hero h2, .hero p {
             position: relative;
             z-index: 2;
         }
 
         .hero h1 {
-            font-size: 42px;
+            font-size: 48px;
             margin-bottom: 10px;
             font-weight: bold;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: normal;
         }
 
         .hero p {
@@ -139,7 +162,7 @@
             line-height: 1.6;
         }
 
-        /* CONTENT */
+        /* MAIN CONTENT */
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -148,15 +171,6 @@
 
         h2 {
             color: #1e3a8a;
-        }
-
-        h3 {
-            color: #1e3a8a;
-            margin-top: 25px;
-        }
-
-        ul {
-            line-height: 1.7;
         }
 
         hr {
@@ -174,6 +188,9 @@
             margin-top: 40px;
         }
     </style>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -198,16 +215,25 @@
                 <a href="resume.html">Résumé</a>
                 <a href="aboutme.html">About Me</a>
                 <a href="contact.html">Contact</a>
-                <a href="actionplan.html" style="color:#1e3a8a; font-weight:bold;">Action Plan</a>
+                <a href="actionplan.html">Action Plan</a> <!-- ⭐ ADDED HERE ⭐ -->
             </div>
         </div>
+
+        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
     </div>
 </div>
 
+<!-- SEARCH BAR -->
+<input type="text" id="searchBar" placeholder="Search this page..." onkeyup="searchPage()">
+
 <!-- HERO -->
 <div class="hero">
-    <h1>Action Plan</h1>
-    <p>Your roadmap for ongoing spiritual and professional development.</p>
+    <h1>Clergy Mandizvidza</h1>
+    <h2>Aspiring IT Professional | Cloud & Data Enthusiast | Disciple‑Leader</h2>
+    <p>
+        Building a meaningful career in Information Technology while staying grounded in faith, integrity, 
+        service, and continuous learning.
+    </p>
 </div>
 
 <!-- MAIN CONTENT -->
