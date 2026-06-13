@@ -3,97 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Action Plan | Mandizvidza Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Action Plan – Clergy Mandizvidza</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        /* HEADER */
+        .topnav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e3a8a;
+            padding: 12px 30px;
+            color: white;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-section img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: #1e3a8a;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #e5e7eb;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* HERO */
+        .hero {
+            background: url('index.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+        }
+
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* CONTENT */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        h3 {
+            color: #1e3a8a;
+            margin-top: 25px;
+        }
+
+        ul {
+            line-height: 1.7;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 2px solid #1e3a8a;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+<!-- HEADER -->
+<div class="topnav">
     <div class="logo-section">
-        <img src="WhatsApp Image 2026-05-23 at 17.40.05 (2).jpeg" alt="Profile Picture">
+        <img src="WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
         <div class="logo-text">Clergy Mandizvidza</div>
     </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="spiritual.html">Spiritual</a></li>
-            <li><a href="professional.html">Professional</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">More</a>
-                <div class="dropdown-content">
-                    <a href="resume.html">Résumé</a>
-                    <a href="aboutme.html">About Me</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="actionplan.html" class="active">Action Plan</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="spiritual.html">Spiritual</a>
+        <a href="professional.html">Professional</a>
+        <a href="projects.html">Projects</a>
+        <a href="week5.html">Week 5</a>
 
-<section class="hero">
-    <img src="itbanner.jpg" alt="Technology Banner">
-    <div class="hero-text">
-        <h2>Action Plan for Ongoing Spiritual & Professional Development</h2>
-        <p>Purpose • Growth • Discipleship</p>
+        <div class="dropdown">
+            <button class="dropdown-btn">More ▼</button>
+            <div class="dropdown-content">
+                <a href="resume.html">Résumé</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="contact.html">Contact</a>
+                <a href="actionplan.html" style="color:#1e3a8a; font-weight:bold;">Action Plan</a>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 
-<section class="content">
-    <h1>Action Plan for Ongoing Spiritual and Professional Development</h1>
+<!-- HERO -->
+<div class="hero">
+    <h1>Action Plan</h1>
+    <p>Your roadmap for ongoing spiritual and professional development.</p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
 
     <h2>Spiritual Development Goals</h2>
 
     <h3>1. Deepen Daily Discipleship</h3>
     <ul>
-        <li><strong>Daily Scripture Study:</strong> Study for 20–30 minutes each day with a focus on doctrine, application, and personal revelation.</li>
-        <li><strong>Prayer Routine:</strong> Begin and end each day with intentional prayer, including gratitude and requests for guidance.</li>
-        <li><strong>Weekly Pondering:</strong> Set aside 30–60 minutes weekly to reflect, journal, and evaluate spiritual impressions.</li>
+        <li><strong>Daily Scripture Study:</strong> Study for 20–30 minutes each day with a focus on doctrine and revelation.</li>
+        <li><strong>Prayer Routine:</strong> Begin and end each day with intentional prayer.</li>
+        <li><strong>Weekly Pondering:</strong> Reflect and journal spiritual impressions weekly.</li>
     </ul>
 
     <h3>2. Strengthen Christlike Leadership</h3>
     <ul>
-        <li><strong>Lead by Example:</strong> Practice humility, patience, and integrity in all interactions.</li>
-        <li><strong>Service Opportunities:</strong> Participate in at least one meaningful service activity each month.</li>
-        <li><strong>Mentorship:</strong> Support a peer, friend, or family member through encouragement and spiritual insight.</li>
+        <li><strong>Lead by Example:</strong> Practice humility and integrity.</li>
+        <li><strong>Service:</strong> Participate in meaningful service monthly.</li>
+        <li><strong>Mentorship:</strong> Support someone spiritually or academically.</li>
     </ul>
 
     <h3>3. Build Spiritual Resilience</h3>
     <ul>
-        <li><strong>Temple Worship:</strong> Attend the temple monthly and prepare through study and prayer.</li>
-        <li><strong>Purposeful Fasting:</strong> Fast monthly with a specific purpose and record lessons learned.</li>
-        <li><strong>Spiritual Maintenance Plan:</strong> Create a written plan for spiritual grounding during stressful seasons.</li>
+        <li><strong>Temple Worship:</strong> Attend monthly.</li>
+        <li><strong>Purposeful Fasting:</strong> Fast with intent and record insights.</li>
+        <li><strong>Spiritual Maintenance Plan:</strong> Prepare a grounding strategy for stressful times.</li>
     </ul>
+
+    <hr>
 
     <h2>Professional Development Goals</h2>
 
     <h3>1. Advance Technical Expertise</h3>
     <ul>
-        <li><strong>Targeted Learning:</strong> Complete one professional course every 2–3 months.</li>
-        <li><strong>Certifications:</strong> Identify 1–2 relevant certifications and set preparation timelines.</li>
-        <li><strong>Project Application:</strong> Apply new skills in personal or volunteer projects and document them in the portfolio.</li>
+        <li><strong>Targeted Learning:</strong> Complete one IT course every 2–3 months.</li>
+        <li><strong>Certifications:</strong> Identify and prepare for 1–2 relevant certifications.</li>
+        <li><strong>Project Application:</strong> Apply new skills in real projects.</li>
     </ul>
 
-    <h3>2. Strengthen Communication and Writing Skills</h3>
+    <h3>2. Strengthen Communication & Writing</h3>
     <ul>
-        <li><strong>Weekly Writing Practice:</strong> Write and revise one short piece each week using clarity and conciseness principles.</li>
-        <li><strong>Feedback Loop:</strong> Request feedback on at least one writing sample each month.</li>
-        <li><strong>Technical Simplification:</strong> Practice explaining one complex concept in simple language weekly.</li>
+        <li><strong>Weekly Writing Practice:</strong> Improve clarity and structure.</li>
+        <li><strong>Feedback Loop:</strong> Request monthly writing feedback.</li>
+        <li><strong>Technical Simplification:</strong> Practice explaining complex concepts simply.</li>
     </ul>
 
-    <h3>3. Build a Long-Term Career Trajectory</h3>
+    <h3>3. Build a Long-Term Career Path</h3>
     <ul>
-        <li><strong>Portfolio Updates:</strong> Review and update the professional portfolio every quarter.</li>
-        <li><strong>Networking:</strong> Connect with at least one new professional contact each month.</li>
-        <li><strong>12-Month Career Goal:</strong> Define a target role and outline 3–5 concrete steps to achieve it within a year.</li>
+        <li><strong>Portfolio Updates:</strong> Refresh quarterly.</li>
+        <li><strong>Networking:</strong> Connect with one new professional monthly.</li>
+        <li><strong>12-Month Goal:</strong> Define a target IT role and steps to reach it.</li>
     </ul>
-</section>
+
+</div>
 
 <footer>
-    <p>&copy; 2026 Mandizvidza. All Rights Reserved.</p>
+    © 2026 Clergy Mandizvidza — All Rights Reserved
 </footer>
 
 </body>
