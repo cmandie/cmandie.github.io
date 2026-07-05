@@ -65,7 +65,7 @@
             cursor: pointer;
         }
 
-        /* HERO BANNER */
+        /* HERO */
         .hero {
             background: url('index.jpg') center/cover no-repeat;
             color: white;
@@ -89,19 +89,6 @@
             z-index: 2;
         }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
         /* MAIN CONTENT */
         .container {
             max-width: 900px;
@@ -119,8 +106,19 @@
             border-top: 2px solid #1e3a8a;
         }
 
-        ul {
-            line-height: 1.7;
+        /* IMAGE GALLERY */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 30%;
+            border-radius: 8px;
+            border: 2px solid #1e3a8a;
+            object-fit: cover;
         }
 
         /* FOOTER */
@@ -138,7 +136,7 @@
 
 <body>
 
-<!-- HEADER (UPDATED TO MATCH INDEX.HTML) -->
+<!-- HEADER -->
 <div class="topnav">
     <div class="logo-section">
         <img src="WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
@@ -151,12 +149,11 @@
         <a href="skills.html">Engineering Skills & Certifications</a>
         <a href="projects.html">Projects & Field Work</a>
         <a href="profile.html">Contact</a>
-
         <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
     </div>
 </div>
 
-<!-- HERO BANNER (UPDATED TO REMOVE IT WORDING) -->
+<!-- HERO -->
 <div class="hero">
     <h1>Projects & Field Work</h1>
     <p>Engineering excellence, technical growth, and leadership development guiding my career.</p>
@@ -164,132 +161,109 @@
 
 <!-- MAIN CONTENT -->
 <div class="container">
+
+    <!-- BOREHOLE UTILITIES -->
     <hr>
+    <h2>Borehole, Utilities & Pump Maintenance</h2>
+    <p>
+        Mechanical and fluid utilities engineering portfolio documenting installation, alignment, pipeline plumbing,
+        and breakdown maintenance of high‑capacity submersible borehole pumps and municipal water distribution systems.
+    </p>
 
-<h2>Borehole, Utilities & Pump Maintenance</h2>
-<p>
-Mechanical and fluid utilities engineering portfolio documenting the installation, alignment, pipeline 
-plumbing, and breakdown maintenance of high‑capacity submersible borehole pumps and municipal water 
-distribution infrastructure.
-</p>
+    <h3>📸 Project Gallery</h3>
+    <div class="gallery">
+        <img src="PV mounting for commercial borehole.jpeg">
+        <img src="Pressure tank installation.jpeg">
+        <img src="Domestic pressure tank installation.jpeg">
+        <img src="booster pump repair.jpeg">
+        <img src="solar pumping inverter installation.jpeg">
+        <img src="solar borehole.jpeg">
+        <img src="submissible pump installation.jpeg">
+        <img src="submissible pump and pump drive installation.jpeg">
+        <img src="successful installation for borehole pv.jpeg">
+        <img src="Installed vsd on pump.jpeg">
+        <img src="Tank and Tank stand installation.jpeg">
+        <img src="church borehole installation.jpeg">
+        <img src="commercial borehole solar.jpeg">
+    </div>
 
-<h3>💧 Municipal & Community Borehole Utilities Engineering</h3>
-<p>
-This section documents my practical experience managing, servicing, and restoring large‑scale water 
-extraction networks, fluid piping, and heavy pumping machinery—aligned with industrial plant utilities 
-and factory fluid system requirements.
-</p>
+    <!-- SOLAR PV -->
+    <hr>
+    <h2>⚡ Solar PV & Battery Storage Commissioning</h2>
+    <p>
+        Hands‑on engineering work in decentralized solar PV systems, hybrid inverter configuration, battery storage,
+        and electrical protection commissioning.
+    </p>
 
-<h3>🛠️ Core Technical Competencies Demonstrated</h3>
+    <h3>📸 Project Gallery</h3>
+    <div class="gallery">
+        <img src="10kva pv array.jpeg">
+        <img src="10kva system installed jpeg">
+        <img src="3kva-solar-system.jpeg">
+        <img src="5kva 48kwh system.jpeg">
+        <img src="Skva 96kwhsystem.jpeg">
+        <img src="96kwh battery storage.jpeg">
+        <img src="Domestic pv installation.jpeg">
+        <img src="domestic solar installation.jpeg">
+        <img src="pv installation completed.jpeg">
+        <img src="pv mounting completion domestic.jpeg">
+        <img src="pvroof mounting.jpeg">
+        <img src="roof pv installation.jpeg">
+        <img src="Boarding school PV installation.jpeg">
+        <img src="Private school PV installation.jpeg">
+        <img src="wiring solar.jpeg">
+        <img src="solar inverter configuration.jpeg">
+        <img src="Inerter configuration.jpeg">
+    </div>
 
-<h4>1. Mechanical Plant & Pump Maintenance</h4>
-<ul>
-    <li><strong>Heavy Machinery Handling:</strong> Uncoupling, rigging, and safely lowering high‑capacity submersible borehole pumps into deep well shafts.</li>
-    <li><strong>Asset Calibration:</strong> Routine mechanical servicing, impeller clearance inspections, and mechanical seal replacement to optimize asset longevity and efficiency.</li>
-</ul>
+    <!-- THREE PHASE -->
+    <hr>
+    <h2>🔌 Three‑Phase Power Distribution & Motor Control Systems</h2>
+    <p>
+        Industrial electrical engineering portfolio showcasing 3‑phase (400V) power distribution, VSD integration,
+        motor control circuits, and safe isolation (LOTO) protocols.
+    </p>
 
-<h4>2. Fluid Mechanics & Pipeline Plumbing</h4>
-<ul>
-    <li><strong>Pressure Regulation:</strong> Installing, checking, and aligning non‑return valves, pressure gauges, and isolating gate valves across industrial lines.</li>
-    <li><strong>Friction Loss Mitigation:</strong> Ensuring airtight high‑pressure couplings and pipework alignment to eliminate leaks and maintain peak hydraulic throughput.</li>
-</ul>
+    <h3>📸 Project Gallery</h3>
+    <div class="gallery">
+        <img src="3 phase do rewired.jpeg">
+        <img src="3 phase motor.jpeg">
+        <img src="3phase motor wiringjpeg">
+        <img src="Final rewiring 3 phase.jpeg">
+        <img src="before rewiring 3 phase.jpeg">
+        <img src="wiring motor contol system.jpeg">
+        <img src="vsd maintenance jpeg">
+        <img src="vsd wiring jpeg">
+        <img src="Installed vsd on pump.jpeg">
+        <img src="switch installation.jpeg">
+    </div>
 
-<h4>3. Electrical Interfacing & Fault Diagnostics</h4>
-<ul>
-    <li><strong>Control Loop Integration:</strong> Wiring automated float switches, electronic depth sensors, and low‑voltage water level control relays to protect pumps against dry‑running.</li>
-    <li><strong>Motor Diagnostics:</strong> Using multimeters to conduct insulation resistance tests and verify phase current balancing on industrial‑grade 3‑phase pump motors.</li>
-</ul>
+    <!-- INDUSTRIAL & MECHANICAL -->
+    <hr>
+    <h2>🏭 Industrial & Mechanical Projects</h2>
+    <p>
+        Heavy machinery installation, conveyor systems, welding, industrial plant work, and large‑scale engineering operations.
+    </p>
 
-<h4>4. Breakdown Recovery & Reliability</h4>
-<ul>
-    <li><strong>Rapid Fault Resolution:</strong> Executing detailed breakdown analyses under high‑pressure scenarios to quickly isolate mechanical jams or electrical control failures.</li>
-    <li><strong>Downtime Prevention:</strong> Successfully restoring supply and preventing catastrophic system outages.</li>
-</ul>
+    <h3>📸 Project Gallery</h3>
+    <div class="gallery">
+        <img src="converye belt installation.jpeg">
+        <img src="conveyer-belt.jpeg">
+        <img src="workshop welding jpeg">
+        <img src="k2 project.jpeg">
+        <img src="k2.jpeg">
+        <img src="Dema 100MW plant.jpeg">
+        <img src="Dema power plant.jpeg">
+        <img src="mill epair jpeg">
+        <img src="night shift installation.jpeg">
+        <img src="kuwadzana major park project.jpeg">
+    </div>
 
-<h3>📸 Project Gallery & Visual Proof</h3>
-<p>(Upload drilling site photos, pump lifting shots, pipework seals, and pump control box panels here.)</p>
+</div>
 
+<footer>
+    © 2026 Clergy Mandizvidza — Engineering Portfolio
+</footer>
 
-<hr>
-
-<h2>⚡ Solar PV & Battery Storage Commissioning</h2>
-<p>
-This portfolio documents hands-on engineering work in decentralized solar photovoltaic (PV) systems, 
-hybrid inverter configuration, battery energy storage systems (BESS), and electrical protection 
-commissioning. It includes structural layouts, wiring schematics, safety integration, and visual proof 
-of completed installations.
-</p>
-
-<h3>🛠️ Core Technical Competencies</h3>
-
-<h4>⚙️ DC & AC Power Electronics</h4>
-<ul>
-    <li>Hybrid and grid-tied inverter installation</li>
-    <li>Parameter configuration for DC–AC conversion</li>
-    <li>String layout engineering and voltage balancing</li>
-</ul>
-
-<h4>🔋 Battery Energy Storage Systems (BESS)</h4>
-<ul>
-    <li>Lithium-ion and deep-cycle battery bank installation</li>
-    <li>Terminal torqueing and containment safety</li>
-    <li>Charge controller and BMS calibration</li>
-</ul>
-
-<h4>⚡ Electrical Protection & Grounding</h4>
-<ul>
-    <li>DC isolators, AC SPDs, and high-voltage fuses</li>
-    <li>Ground rod installation and bonding</li>
-    <li>Lightning mitigation and operator safety</li>
-</ul>
-
-<h3>📸 Project Gallery & Visual Proof</h3>
-<p>(Upload your solar installation photos, inverter configuration images, wiring schematics, and BESS setups here.)</p>
-
-
-
-<hr>
-
-<h2>🔌 Three‑Phase Power Distribution & Motor Control Systems</h2>
-<p>
-Industrial electrical engineering portfolio showcasing 3‑phase (400V) power distribution, Variable Speed Drive (VSD) 
-integration, motor control circuits, and safe isolation (LOTO) protocols compliant with BS 7671 standards.
-</p>
-
-<h3>Industrial Electrical Engineering Overview</h3>
-<p>
-This section documents hands‑on installation, testing, and maintenance of low‑voltage and 3‑phase (400V) infrastructure, 
-aligned with UK regulatory frameworks and modern factory automation requirements.
-</p>
-
-<hr>
-
-<h3>🛠️ Core Technical Competencies Demonstrated</h3>
-
-<h4>1. Three‑Phase (400V) Power Distribution</h4>
-<ul>
-    <li><strong>Installation Mastery:</strong> Laying out industrial distribution networks, mounting three‑phase distribution boards (DBs), terminating SWA cabling, and wiring multi‑pole circuit breakers.</li>
-    <li><strong>Testing & Commissioning:</strong> Performing phase rotation tests, insulation resistance checks, and earth fault loop impedance (Zs) verification using industrial multi‑function testers.</li>
-</ul>
-
-<h4>2. Variable Speed Drives (VSD / VFD) & Automation</h4>
-<ul>
-    <li><strong>Control Signal Wiring:</strong> Terminating 3‑phase incoming power, motor outputs, and low‑voltage control loops (0‑10V / 4‑20mA instrumentation loops) for automated machine speed control.</li>
-    <li><strong>Parameter Calibration:</strong> Programming acceleration/deceleration ramps, motor frequency thresholds, and electronic overload limits via drive HMIs.</li>
-</ul>
-
-<h4>3. Industrial Motor Control & Submersible Pumps</h4>
-<ul>
-    <li><strong>Control Panel Design:</strong> Wiring and fault‑finding on Star‑Delta starters, DOL starters, float switches, and heavy‑duty contactors.</li>
-    <li><strong>System Reliability:</strong> Implementing preventive maintenance (PPM) routines on industrial pump motors to eliminate unexpected downtime.</li>
-</ul>
-
-<h4>4. Safe Isolation & Compliance</h4>
-<ul>
-    <li><strong>LOTO Protocol:</strong> Strict adherence to safe isolation procedures using approved voltage indicators (AVIs) and Lock‑Out/Tag‑Out padlocks before intrusive electrical work.</li>
-</ul>
-
-<hr>
-
-<h3>📸 Project Gallery & Visual Proof</h3>
-<p>(Upload installation photos showing clean wiring, trunking, VSD panels, and motor control boards here.)</p>
+</body>
+</html>
