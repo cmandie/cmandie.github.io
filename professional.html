@@ -60,51 +60,14 @@
             text-decoration: underline;
         }
 
-        /* DROPDOWN */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
+        .search-icon {
+            font-size: 20px;
             cursor: pointer;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: white;
-            min-width: 180px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-            border-radius: 6px;
-            z-index: 1000;
-        }
-
-        .dropdown-content a {
-            color: #1e3a8a;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-weight: bold;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #e5e7eb;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
         }
 
         /* HERO BANNER */
         .hero {
-            background: url('itbanner.jpg') center/cover no-repeat;
+            background: url('index.jpg') center/cover no-repeat;
             color: white;
             padding: 80px 20px;
             text-align: center;
@@ -175,34 +138,28 @@
 
 <body>
 
-<!-- HEADER -->
+<!-- HEADER (UPDATED TO MATCH INDEX.HTML) -->
 <div class="topnav">
     <div class="logo-section">
-        <img src="WhatsApp Image 2026-05-23 at 17.40.05 (2).jpeg" alt="Profile Photo">
+        <img src="WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
         <div class="logo-text">Clergy Mandizvidza</div>
     </div>
 
     <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="spiritual.html">Spiritual</a>
         <a href="professional.html">Professional</a>
-        <a href="projects.html">Projects</a>
+        <a href="skills.html">Engineering Skills & Certifications</a>
+        <a href="projects.html">Projects & Field Work</a>
+        <a href="profile.html">Contact</a>
 
-        <div class="dropdown">
-            <button class="dropdown-btn">More ▼</button>
-            <div class="dropdown-content">
-                <a href="resume.html">Résumé</a>
-                <a href="aboutme.html">About Me</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
+        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
     </div>
 </div>
 
-<!-- HERO BANNER -->
+<!-- HERO BANNER (UPDATED TO REMOVE IT WORDING) -->
 <div class="hero">
     <h1>Professional Goals</h1>
-    <p>Engineering foundations, IT growth, and leadership development guiding my journey.</p>
+    <p>Engineering excellence, technical growth, and leadership development guiding my career.</p>
 </div>
 
 <!-- MAIN CONTENT -->
@@ -210,63 +167,52 @@
 
     <h2>My Professional Goals</h2>
     <p>
-        My goals reflect my transition from engineering into Information Technology and my commitment to building a career that blends technical expertise, problem‑solving, and ethical leadership.
+        My goals reflect my engineering background and my commitment to building a career grounded in 
+        technical mastery, operational safety, and ethical leadership.
     </p>
 
     <hr>
 
-    <h2>Goal 1: Integrate Engineering Foundations into IT Practice</h2>
+    <h2>Goal 1: Strengthen Engineering Expertise</h2>
     <ul>
-        <li><strong>Specific:</strong> Apply my background in electrical and energy engineering to strengthen my understanding of IT infrastructure, system reliability, and troubleshooting.</li>
-        <li><strong>Measurable:</strong> Complete at least two IT projects that incorporate engineering principles.</li>
-        <li><strong>Achievable:</strong> By leveraging my engineering experience and expanding my IT skills through coursework.</li>
-        <li><strong>Relevant:</strong> Engineering gives me a unique advantage in understanding hardware and systems behavior.</li>
-        <li><strong>Time‑Bound:</strong> Demonstrate integration of engineering concepts by the end of IT 497.</li>
+        <li><strong>Specific:</strong> Advance my knowledge in electrical systems, industrial maintenance, and utilities engineering.</li>
+        <li><strong>Measurable:</strong> Complete engineering projects demonstrating fault‑finding, system reliability, and safety compliance.</li>
+        <li><strong>Achievable:</strong> Through hands‑on work, structured training, and continuous improvement.</li>
+        <li><strong>Relevant:</strong> Engineering is the foundation of my professional identity.</li>
+        <li><strong>Time‑Bound:</strong> Achieve measurable progress within the next 12 months.</li>
     </ul>
 
     <hr>
 
-    <h2>Goal 2: Advance Skills in System Administration and Cloud Technologies</h2>
+    <h2>Goal 2: Advance Technical Certifications</h2>
     <ul>
-        <li><strong>Specific:</strong> Strengthen my capabilities in system administration, cloud computing, and IT operations.</li>
-        <li><strong>Measurable:</strong> Earn at least one certification and complete two cloud‑based projects.</li>
-        <li><strong>Achievable:</strong> Through hands‑on labs, study, and cloud platform practice.</li>
-        <li><strong>Relevant:</strong> These skills are essential for modern IT environments.</li>
-        <li><strong>Time‑Bound:</strong> Complete before the end of my degree program.</li>
+        <li><strong>Specific:</strong> Earn additional UK‑recognized engineering certifications.</li>
+        <li><strong>Measurable:</strong> Complete at least one new qualification (LOTO, HV operations, PPM).</li>
+        <li><strong>Achievable:</strong> Through structured study and practical assessments.</li>
+        <li><strong>Relevant:</strong> Certifications strengthen my employability and technical credibility.</li>
+        <li><strong>Time‑Bound:</strong> Complete within the next year.</li>
     </ul>
 
     <hr>
 
-    <h2>Goal 3: Build a Comprehensive Professional Portfolio</h2>
+    <h2>Goal 3: Build a Comprehensive Engineering Portfolio</h2>
     <ul>
-        <li><strong>Specific:</strong> Develop a digital portfolio showcasing engineering strengths, IT skills, certifications, and projects.</li>
-        <li><strong>Measurable:</strong> Include at least four major items: engineering‑informed IT projects, résumé, certifications, and reflections.</li>
-        <li><strong>Achievable:</strong> By updating the portfolio weekly during IT 497.</li>
-        <li><strong>Relevant:</strong> A strong portfolio demonstrates my interdisciplinary strengths.</li>
-        <li><strong>Time‑Bound:</strong> Complete the initial version during IT 497.</li>
+        <li><strong>Specific:</strong> Document engineering projects, maintenance work, and field operations.</li>
+        <li><strong>Measurable:</strong> Add at least four major engineering projects.</li>
+        <li><strong>Achievable:</strong> By updating the portfolio monthly.</li>
+        <li><strong>Relevant:</strong> A strong portfolio demonstrates real‑world capability.</li>
+        <li><strong>Time‑Bound:</strong> Complete initial version within 6 months.</li>
     </ul>
 
     <hr>
 
     <h2>Goal 4: Strengthen Leadership and Professional Ethics</h2>
     <ul>
-        <li><strong>Specific:</strong> Improve leadership, teamwork, and ethical reasoning in technical environments.</li>
-        <li><strong>Measurable:</strong> Participate in peer reviews, group work, and ethical case studies.</li>
+        <li><strong>Specific:</strong> Improve leadership, teamwork, and ethical decision‑making.</li>
+        <li><strong>Measurable:</strong> Participate in team projects and safety leadership tasks.</li>
         <li><strong>Achievable:</strong> Through active engagement and reflection.</li>
-        <li><strong>Relevant:</strong> Leadership and ethics are essential for long‑term success.</li>
-        <li><strong>Time‑Bound:</strong> Show measurable improvement by the end of IT 497.</li>
-    </ul>
-
-    <hr>
-
-    <h2>Action Plan</h2>
-    <ul>
-        <li>Apply engineering problem‑solving methods to IT tasks.</li>
-        <li>Strengthen technical foundations through labs and certifications.</li>
-        <li>Expand my portfolio with engineering‑informed IT projects.</li>
-        <li>Build professional relationships through networking.</li>
-        <li>Apply ethical principles in all academic and professional activities.</li>
-        <li>Seek opportunities for leadership and service.</li>
+        <li><strong>Relevant:</strong> Leadership is essential in engineering environments.</li>
+        <li><strong>Time‑Bound:</strong> Show measurable improvement within 12 months.</li>
     </ul>
 
 </div>
