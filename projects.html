@@ -56,13 +56,12 @@
             font-size: 16px;
         }
 
-        .nav-links a:hover {
+        .nav-links a.active {
             text-decoration: underline;
         }
 
-        .search-icon {
-            font-size: 20px;
-            cursor: pointer;
+        .nav-links a:hover {
+            opacity: 0.8;
         }
 
         /* HERO */
@@ -72,6 +71,7 @@
             padding: 80px 20px;
             text-align: center;
             position: relative;
+            min-height: 280px;
         }
 
         .hero::before {
@@ -91,34 +91,46 @@
 
         /* MAIN CONTENT */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
         h2 {
             color: #1e3a8a;
+            margin-top: 40px;
         }
 
         hr {
-            margin: 30px 0;
+            margin: 40px 0 20px;
             border: 0;
             border-top: 2px solid #1e3a8a;
         }
 
-        /* IMAGE GALLERY */
+        /* SKILLS LIST */
+        ul.skills {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        ul.skills li {
+            margin-bottom: 6px;
+        }
+
+        /* RESPONSIVE GALLERY */
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             margin: 20px 0;
         }
 
         .gallery img {
-            width: 30%;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
             border-radius: 8px;
             border: 2px solid #1e3a8a;
-            object-fit: cover;
         }
 
         /* FOOTER */
@@ -139,7 +151,7 @@
 <!-- HEADER -->
 <div class="topnav">
     <div class="logo-section">
-        <img src="WhatsApp Image 2026-05-23 at 17.40.05.jpeg" alt="Profile Photo">
+        <img src="profile.jpg" alt="Profile Photo">
         <div class="logo-text">Clergy Mandizvidza</div>
     </div>
 
@@ -147,16 +159,15 @@
         <a href="index.html">Home</a>
         <a href="professional.html">Professional</a>
         <a href="skills.html">Engineering Skills & Certifications</a>
-        <a href="projects.html">Projects & Field Work</a>
+        <a href="projects.html" class="active">Projects & Field Work</a>
         <a href="profile.html">Contact</a>
-        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
     </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
     <h1>Projects & Field Work</h1>
-    <p>Engineering excellence, technical growth, and leadership development guiding my career.</p>
+    <p>Engineering excellence, technical mastery, and hands‑on field experience.</p>
 </div>
 
 <!-- MAIN CONTENT -->
@@ -164,99 +175,136 @@
 
     <!-- BOREHOLE UTILITIES -->
     <hr>
-    <h2>Borehole, Utilities & Pump Maintenance</h2>
+    <h2>🚰 Borehole, Utilities & Pump Maintenance</h2>
     <p>
-        Mechanical and fluid utilities engineering portfolio documenting installation, alignment, pipeline plumbing,
-        and breakdown maintenance of high‑capacity submersible borehole pumps and municipal water distribution systems.
+        Mechanical and fluid‑handling engineering work covering installation, alignment, plumbing, and maintenance of
+        high‑capacity submersible pumps, pressure tanks, booster systems, and municipal water distribution pipelines.
     </p>
+
+    <h3>Skills Mastered</h3>
+    <ul class="skills">
+        <li>Submersible pump installation & retrieval</li>
+        <li>Pipeline plumbing & leak diagnostics</li>
+        <li>Pressure tank calibration & commissioning</li>
+        <li>Booster pump repair & motor alignment</li>
+        <li>Solar‑powered borehole system integration</li>
+    </ul>
 
     <h3>📸 Project Gallery</h3>
     <div class="gallery">
-        <img src="PV mounting for commercial borehole.jpeg">
-        <img src="Pressure tank installation.jpeg">
-        <img src="Domestic pressure tank installation.jpeg">
-        <img src="booster pump repair.jpeg">
-        <img src="solar pumping inverter installation.jpeg">
-        <img src="solar borehole.jpeg">
-        <img src="submissible pump installation.jpeg">
-        <img src="submissible pump and pump drive installation.jpeg">
-        <img src="successful installation for borehole pv.jpeg">
-        <img src="Installed vsd on pump.jpeg">
-        <img src="Tank and Tank stand installation.jpeg">
-        <img src="church borehole installation.jpeg">
-        <img src="commercial borehole solar.jpeg">
+        <img src="pv-mounting-commercial-borehole.jpg">
+        <img src="pressure-tank-installation.jpg">
+        <img src="domestic-pressure-tank.jpg">
+        <img src="booster-pump-repair.jpg">
+        <img src="solar-pumping-inverter.jpg">
+        <img src="solar-borehole.jpg">
+        <img src="submersible-pump-installation.jpg">
+        <img src="pump-drive-installation.jpg">
+        <img src="borehole-pv-success.jpg">
+        <img src="vsd-installed-pump.jpg">
+        <img src="tank-stand-installation.jpg">
+        <img src="church-borehole.jpg">
+        <img src="commercial-borehole-solar.jpg">
     </div>
 
     <!-- SOLAR PV -->
     <hr>
     <h2>⚡ Solar PV & Battery Storage Commissioning</h2>
     <p>
-        Hands‑on engineering work in decentralized solar PV systems, hybrid inverter configuration, battery storage,
-        and electrical protection commissioning.
+        Field deployment of decentralized solar PV systems, hybrid inverter configuration, battery storage integration,
+        and electrical protection commissioning for residential, commercial, and institutional clients.
     </p>
+
+    <h3>Skills Mastered</h3>
+    <ul class="skills">
+        <li>PV array mounting & structural alignment</li>
+        <li>Hybrid inverter configuration (Mecer, MUST, Synapse)</li>
+        <li>Battery bank setup (LiFePO₄, 48–96 kWh)</li>
+        <li>DC/AC protection installation (isolators, breakers, surge protection)</li>
+        <li>Load balancing & energy optimization</li>
+    </ul>
 
     <h3>📸 Project Gallery</h3>
     <div class="gallery">
-        <img src="10kva pv array.jpeg">
-        <img src="10kva system installed jpeg">
-        <img src="3kva-solar-system.jpeg">
-        <img src="5kva 48kwh system.jpeg">
-        <img src="Skva 96kwhsystem.jpeg">
-        <img src="96kwh battery storage.jpeg">
-        <img src="Domestic pv installation.jpeg">
-        <img src="domestic solar installation.jpeg">
-        <img src="pv installation completed.jpeg">
-        <img src="pv mounting completion domestic.jpeg">
-        <img src="pvroof mounting.jpeg">
-        <img src="roof pv installation.jpeg">
-        <img src="Boarding school PV installation.jpeg">
-        <img src="Private school PV installation.jpeg">
-        <img src="wiring solar.jpeg">
-        <img src="solar inverter configuration.jpeg">
-        <img src="Inerter configuration.jpeg">
+        <img src="10kva-pv-array.jpg">
+        <img src="10kva-system-installed.jpg">
+        <img src="3kva-solar-system.jpg">
+        <img src="5kva-48kwh-system.jpg">
+        <img src="5kva-96kwh-system.jpg">
+        <img src="96kwh-battery-storage.jpg">
+        <img src="domestic-pv-installation.jpg">
+        <img src="domestic-solar-installation.jpg">
+        <img src="pv-installation-complete.jpg">
+        <img src="pv-mounting-domestic.jpg">
+        <img src="pv-roof-mounting.jpg">
+        <img src="roof-pv-installation.jpg">
+        <img src="boarding-school-pv.jpg">
+        <img src="private-school-pv.jpg">
+        <img src="solar-wiring.jpg">
+        <img src="solar-inverter-configuration.jpg">
+        <img src="inverter-configuration.jpg">
     </div>
 
     <!-- THREE PHASE -->
     <hr>
     <h2>🔌 Three‑Phase Power Distribution & Motor Control Systems</h2>
     <p>
-        Industrial electrical engineering portfolio showcasing 3‑phase (400V) power distribution, VSD integration,
-        motor control circuits, and safe isolation (LOTO) protocols.
+        Industrial electrical engineering work involving 400V three‑phase distribution, VSD integration, motor control
+        circuits, safe isolation (LOTO), and corrective maintenance.
     </p>
+
+    <h3>Skills Mastered</h3>
+    <ul class="skills">
+        <li>Three‑phase motor wiring & commissioning</li>
+        <li>VSD installation, tuning & troubleshooting</li>
+        <li>Control panel wiring & relay logic</li>
+        <li>Safe isolation (LOTO) procedures</li>
+        <li>Industrial fault‑finding & corrective maintenance</li>
+    </ul>
 
     <h3>📸 Project Gallery</h3>
     <div class="gallery">
-        <img src="3 phase do rewired.jpeg">
-        <img src="3 phase motor.jpeg">
-        <img src="3phase motor wiringjpeg">
-        <img src="Final rewiring 3 phase.jpeg">
-        <img src="before rewiring 3 phase.jpeg">
-        <img src="wiring motor contol system.jpeg">
-        <img src="vsd maintenance jpeg">
-        <img src="vsd wiring jpeg">
-        <img src="Installed vsd on pump.jpeg">
-        <img src="switch installation.jpeg">
+        <img src="3phase-do-rewired.jpg">
+        <img src="3phase-motor.jpg">
+        <img src="3phase-motor-wiring.jpg">
+        <img src="3phase-final-rewiring.jpg">
+        <img src="3phase-before-rewiring.jpg">
+        <img src="motor-control-wiring.jpg">
+        <img src="vsd-maintenance.jpg">
+        <img src="vsd-wiring.jpg">
+        <img src="vsd-installed-pump.jpg">
+        <img src="switch-installation.jpg">
     </div>
 
     <!-- INDUSTRIAL & MECHANICAL -->
     <hr>
     <h2>🏭 Industrial & Mechanical Projects</h2>
     <p>
-        Heavy machinery installation, conveyor systems, welding, industrial plant work, and large‑scale engineering operations.
+        Heavy machinery installation, conveyor systems, welding, industrial plant operations, and large‑scale engineering
+        projects across manufacturing and power‑generation environments.
     </p>
+
+    <h3>Skills Mastered</h3>
+    <ul class="skills">
+        <li>Conveyor belt installation & alignment</li>
+        <li>Industrial welding & fabrication</li>
+        <li>Plant equipment installation & commissioning</li>
+        <li>Mechanical fault diagnosis & repair</li>
+        <li>Large‑scale project coordination</li>
+    </ul>
 
     <h3>📸 Project Gallery</h3>
     <div class="gallery">
-        <img src="converye belt installation.jpeg">
-        <img src="conveyer-belt.jpeg">
-        <img src="workshop welding jpeg">
-        <img src="k2 project.jpeg">
-        <img src="k2.jpeg">
-        <img src="Dema 100MW plant.jpeg">
-        <img src="Dema power plant.jpeg">
-        <img src="mill epair jpeg">
-        <img src="night shift installation.jpeg">
-        <img src="kuwadzana major park project.jpeg">
+        <img src="conveyor-belt-installation.jpg">
+        <img src="conveyor-belt.jpg">
+        <img src="workshop-welding.jpg">
+        <img src="k2-project.jpg">
+        <img src="k2.jpg">
+        <img src="dema-100mw-plant.jpg">
+        <img src="dema-power-plant.jpg">
+        <img src="mill-repair.jpg">
+        <img src="night-shift-installation.jpg">
+        <img src="kuwadzana-major-park.jpg">
     </div>
 
 </div>
