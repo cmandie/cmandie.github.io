@@ -57,58 +57,17 @@
         }
 
         .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* DROPDOWN */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: white;
-            min-width: 180px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-            border-radius: 6px;
-            z-index: 1000;
-        }
-
-        .dropdown-content a {
-            color: #1e3a8a;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-weight: bold;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #e5e7eb;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
+            opacity: 0.8;
         }
 
         /* HERO */
         .hero {
-            background: url('itbanner.jpg') center/cover no-repeat;
+            background: url('index.jpg') center/cover no-repeat;
             color: white;
             padding: 80px 20px;
             text-align: center;
             position: relative;
+            min-height: 280px;
         }
 
         .hero::before {
@@ -126,50 +85,54 @@
             z-index: 2;
         }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
         /* MAIN CONTENT */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
         h2 {
             color: #1e3a8a;
+            margin-top: 40px;
         }
 
-        h3 {
-            color: #1e3a8a;
-            margin-top: 25px;
+        hr {
+            margin: 40px 0 20px;
+            border: 0;
+            border-top: 2px solid #1e3a8a;
         }
 
-        a {
-            color: #1e3a8a;
-            font-weight: bold;
+        /* SKILLS LIST */
+        ul.skills {
+            margin: 15px 0;
+            padding-left: 20px;
         }
 
-        .contact-box {
-            background: white;
-            padding: 20px;
+        ul.skills li {
+            margin-bottom: 6px;
+        }
+
+        /* RESPONSIVE GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
             border-radius: 8px;
-            border-left: 5px solid #1e3a8a;
-            margin-bottom: 25px;
+            border: 2px solid #1e3a8a;
+            cursor: pointer;
+            transition: transform 0.2s ease;
         }
 
-        .contact-box p {
-            margin: 8px 0;
+        .gallery img:hover {
+            transform: scale(1.03);
         }
 
         /* FOOTER */
@@ -198,10 +161,8 @@
         <a href="index.html">Home</a>
         <a href="professional.html">Professional</a>
         <a href="skills.html">Engineering Skills & Certifications</a>
-        <a href="projects.html">Projects & Field Work</a>
-        <a href="profile.html" class="active">Contact</a>
-    </div>
-        </div>
+        <a href="projects.html" class="active">Projects & Field Work</a>
+        <a href="contact.html">Contact</a>
     </div>
 </div>
 
