@@ -56,10 +56,6 @@
             font-size: 16px;
         }
 
-        .nav-links a.active {
-            text-decoration: underline;
-        }
-
         .nav-links a:hover {
             opacity: 0.8;
         }
@@ -131,6 +127,12 @@
             object-fit: cover;
             border-radius: 8px;
             border: 2px solid #1e3a8a;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
         }
 
         /* FOOTER */
@@ -159,10 +161,8 @@
         <a href="index.html">Home</a>
         <a href="professional.html">Professional</a>
         <a href="skills.html">Engineering Skills & Certifications</a>
-        <a href="projects.html">Projects & Field Work</a>
+        <a href="projects.html" class="active">Projects & Field Work</a>
         <a href="profile.html">Contact</a>
-
-        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
     </div>
 </div>
 
@@ -175,8 +175,8 @@
 <!-- MAIN CONTENT -->
 <div class="container">
 
-    <!-- BOREHOLE UTILITIES -->
-   <hr>
+<!-- BOREHOLE UTILITIES -->
+<hr>
 <h2>🚰 Borehole, Utilities & Pump Maintenance</h2>
 <p>
     Mechanical and fluid‑handling engineering work covering installation, alignment, plumbing, and maintenance of
@@ -200,7 +200,7 @@
     <img src="booster-pump-repair.jpeg">
     <img src="solar-pumping-inverter-installation.jpeg">
     <img src="solar-borehole.jpeg">
-    <img src="submissible pump installation.jpeg">
+    <img src="submissible-pump-installation.jpeg">
     <img src="submissible-pump-and-pump-drive-installation.jpeg">
     <img src="pv-borehole-installtion-completed.jpeg">
     <img src="successful-installation-for-borehole-pv.jpeg">
@@ -209,9 +209,8 @@
     <img src="commercial-borehole-solar.jpeg">
 </div>
 
-
-    <!-- SOLAR PV -->
-    <hr>
+<!-- SOLAR PV -->
+<hr>
 <h2>⚡ Solar PV & Battery Storage Commissioning</h2>
 <p>
     Field deployment of decentralized solar PV systems, hybrid inverter configuration, battery storage integration,
@@ -241,16 +240,15 @@
     <img src="pv-mounting-completion-domestic.jpeg">
     <img src="pv-roof-mounting.jpeg">
     <img src="roof-pv-installation.jpeg">
-    <img src="boarding-school-PV-installation.jpeg">
-    <img src="private-school-PV-installation.jpeg">
+    <img src="boarding-school-pv-installation.jpeg">
+    <img src="private-school-pv-installation.jpeg">
     <img src="wiring-solar.jpeg">
     <img src="solar-inverter-configuration.jpeg">
     <img src="inverter-configuration.jpeg">
 </div>
 
-
-    <!-- THREE PHASE -->
-    <hr>
+<!-- THREE PHASE -->
+<hr>
 <h2>🔌 Three‑Phase Power Distribution & Motor Control Systems</h2>
 <p>
     Industrial electrical engineering work involving 400V three‑phase distribution, VSD integration, motor control
@@ -268,19 +266,19 @@
 
 <h3>📸 Project Gallery</h3>
 <div class="gallery">
-    <img src="3-phase-motor-wiring.jpeg">
+    <img src="3-phase-db -rewired.jpeg">
     <img src="3-phase-motor.jpeg">
     <img src="final-rewiring-3-phase.jpeg">
     <img src="before-rewiring-3-phase.jpeg">
     <img src="wiring-motor-contol-system.jpeg">
     <img src="vsd-maintenance.jpeg">
-    <img src="vsd-wiring.jpeg">
+    <img src="vsd wiring.jpeg">
     <img src="installed-vsd-on-pump.jpeg">
     <img src="switch-installation.jpeg">
 </div>
 
-    <!-- INDUSTRIAL & MECHANICAL -->
-    <hr>
+<!-- INDUSTRIAL & MECHANICAL -->
+<hr>
 <h2>🏭 Industrial & Mechanical Projects</h2>
 <p>
     Heavy machinery installation, conveyor systems, welding, industrial plant operations, and large‑scale engineering
@@ -298,9 +296,6 @@
 
 <h3>📸 Project Gallery</h3>
 <div class="gallery">
-    <img src="briefing.jpeg">
-    <img src="pole-climbing.jpeg">
-    <img src="line-maintenance.jpeg">
     <img src="converyer-belt-installation.jpeg">
     <img src="conveyer-belt.jpeg">
     <img src="workshop-welding.jpeg">
@@ -313,7 +308,8 @@
     <img src="kuwadzana-major-park-project.jpeg">
 </div>
 
-    <hr>
+<!-- LINE WORK -->
+<hr>
 <h2>🪜 Line Work, Pole Work & Field Operations</h2>
 <p>
     High‑risk field operations involving pole climbing, line inspection, safety briefings, and maintenance of overhead
@@ -337,13 +333,14 @@
     <img src="pole-erection.jpeg">
     <img src="poles.jpeg">
 </div>
-    
+
 </div>
 
 <footer>
     © 2026 Clergy Mandizvidza — Engineering Portfolio
 </footer>
 
+<!-- CLICK‑TO‑ZOOM SCRIPT -->
 <script>
 document.querySelectorAll('.gallery img').forEach(img => {
     img.addEventListener('click', () => {
