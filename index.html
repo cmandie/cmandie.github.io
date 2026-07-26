@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clergy Mandizvidza – Portfolio</title>
 
+    <!-- GLOBAL STYLES -->
     <style>
-        /* RESPONSIVE BASE */
-        * { box-sizing: border-box; }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -22,8 +20,8 @@
             justify-content: space-between;
             align-items: center;
             background-color: #1e3a8a;
-            padding: 12px 20px;
-            flex-wrap: wrap;
+            padding: 12px 30px;
+            color: white;
         }
 
         .logo-section {
@@ -44,14 +42,12 @@
             font-size: 22px;
             font-weight: bold;
             letter-spacing: 1px;
-            color: white;
         }
 
         .nav-links {
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 10px;
+            align-items: center;
+            gap: 20px;
         }
 
         .nav-links a {
@@ -62,27 +58,83 @@
         }
 
         .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        .nav-links .active {
             text-decoration: underline;
         }
 
-        /* HERO */
+        .search-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: #1e3a8a;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #e5e7eb;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* SEARCH BAR */
+        #searchBar {
+            display: none;
+            width: 90%;
+            margin: 15px auto;
+            padding: 10px;
+            border: 2px solid #1e3a8a;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* HERO BANNER */
         .hero {
             background: url('index.jpg') center/cover no-repeat;
+            color: white;
             padding: 80px 20px;
             text-align: center;
             position: relative;
-            color: white;
         }
 
         .hero::before {
             content: "";
             position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: rgba(0,0,0,0.45);
         }
 
@@ -100,6 +152,7 @@
         .hero h2 {
             font-size: 24px;
             margin-bottom: 20px;
+            font-weight: normal;
         }
 
         .hero p {
@@ -126,16 +179,6 @@
             border-top: 2px solid #1e3a8a;
         }
 
-        ul li a {
-            color: #1e3a8a;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        ul li a:hover {
-            text-decoration: underline;
-        }
-
         /* FOOTER */
         footer {
             text-align: center;
@@ -144,16 +187,10 @@
             color: white;
             margin-top: 40px;
         }
-
-        /* MOBILE */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 32px; }
-            .hero h2 { font-size: 18px; }
-            .hero p { font-size: 15px; }
-            .nav-links a { font-size: 14px; }
-            .logo-text { font-size: 18px; }
-        }
     </style>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -166,59 +203,156 @@
     </div>
 
     <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
+        <a href="spiritual.html">Spiritual</a>
         <a href="professional.html">Professional</a>
-        <a href="skills.html">Engineering Skills & Certifications</a>
-        <a href="projects.html">Projects & Field Work</a>
-        <a href="contact.html">Contact</a>
+        <a href="projects.html">Projects</a>
+        <a href="week5.html">Week 5</a>
+
+        <div class="dropdown">
+            <button class="dropdown-btn">More ▼</button>
+            <div class="dropdown-content">
+                <a href="resume.html">Résumé</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="contact.html">Contact</a>
+                <a href="actionplan.html">Action Plan</a>
+                <a href="week6.html">Week 6</a>
+                <a href="reflection.html">Reflection</a>
+            </div>
+        </div>
+
+        <i class="fa fa-search search-icon" onclick="toggleSearch()"></i>
     </div>
 </div>
+
+<!-- SEARCH BAR -->
+<input type="text" id="searchBar" placeholder="Search this page..." onkeyup="searchPage()">
 
 <!-- HERO -->
 <div class="hero">
     <h1>Clergy Mandizvidza</h1>
-    <h2>Electrical & Utilities Technician | Industrial Maintenance | Power Systems</h2>
+    <h2>Automation, Electrical & Energy Systems Engineer</h2>
     <p>
-        A safety‑driven engineering professional with hands‑on experience in electrical distribution, 
-        industrial plant maintenance, water systems, and high‑voltage operations. Dedicated to delivering 
-        reliable engineering solutions through precision, compliance, and continuous improvement.
+        Cross-disciplinary Maintenance and Systems Engineer integrating high-voltage power assets,
+        industrial automation, renewable energy systems, and modern IT-based operational technologies.
     </p>
 </div>
 
 <!-- MAIN CONTENT -->
 <div class="container">
 
-    <h2>Welcome to My Engineering Portfolio</h2>
+    <h2>Professional Engineering & Operational Technology Portfolio</h2>
 
     <p>
-        I am an electrical engineering professional based in the UK, specializing in industrial power, energy systems, and electrical maintenance.
-        Holding the BS 7671: 18th Edition Wiring Regulations certification and backed by 4 years of rigorous training in Fuels & Energy Engineering (transcripts currently with UK ENIC), I bridge the gap between technical theory and compliant, hands-on execution.
+        I am a cross-disciplinary Maintenance and Systems Engineer with 6+ years of international experience across
+        electrical distribution networks, industrial automation, renewable energy systems, and fluid-handling plant operations.
+        My work bridges physical engineering assets with modern digital control and monitoring technologies.
     </p>
 
     <p>
-        I am currently in the UK and actively seeking a Multi-Skilled / Electrical Technician role with an employer holding a valid UKVI Sponsor License.
-        I am fully prepared to switch my visa internally and can transition seamlessly into your engineering or estates team.
+        This portfolio documents my engineering background, operational achievements, academic progression, and
+        continuing professional development aligned with UK-SPEC standards as I advance toward Incorporated Engineer (IEng) status.
     </p>
 
     <hr>
 
-    <h2>Engineering Portfolio Sections</h2>
+    <h2>🚀 Professional Profile</h2>
+
+    <p>
+        I am a cross-disciplinary <strong>Maintenance and Systems Engineer</strong> bridging the gap between heavy physical power assets
+        and digital network infrastructure. Backed by <strong>6+ years of international utility, grid, and fluid systems experience</strong>,
+        I pair field-proven expertise in high-voltage operations, three-phase industrial breakdowns, and solar PV integration with
+        advanced operational training in computer systems network architecture.
+    </p>
+
     <ul>
-        <li><a href="professional.html">Professional Summary</a></li>
-        <li><a href="skills.html">Engineering Skills & Certifications</a></li>
-        <li><a href="contact.html">Contact Information</a></li>
-        <li><a href="projects.html">Projects & Field Work</a></li>
+        <li><strong>⚡ UK Electrical Compliance:</strong> Fully certified in City & Guilds 18th Edition Wiring Regulations (BS 7671).</li>
+        <li><strong>🎓 Dual Academic Foundation:</strong> 4/5 Years Completed in Fuels & Energy Engineering + BSc in System Administration.</li>
+        <li><strong>🇬🇧 Immigration Status:</strong> Skilled Worker Visa holder, eligible for immediate in-country sponsorship transfer.</li>
     </ul>
 
     <hr>
 
-    <p><strong>Thank you for visiting my engineering portfolio.</strong></p>
+    <h2>🛠️ Core Engineering Pillars</h2>
+
+    <h3>☀️ Renewable Energy & Battery Storage</h3>
+    <ul>
+        <li>Structural mounting, array alignment, and electrical integration of solar PV systems.</li>
+        <li>Hybrid inverter configuration (Mecer, MUST, Synapse) and LiFePO₄ battery banks (24–96 kWh).</li>
+        <li>Calibration of export settings and digital monitoring platforms.</li>
+    </ul>
+
+    <h3>💧 Industrial Automation & Fluid Systems</h3>
+    <ul>
+        <li>Diagnostic testing and breakdown response on 400V three-phase motors.</li>
+        <li>Maintenance of pumps, pressure tanks, conveyors, and industrial plant systems.</li>
+        <li>Advanced MCC troubleshooting, VSD installation, and LOTOTO compliance.</li>
+    </ul>
+
+    <h3>🌐 Grid Operations & High-Voltage Architecture</h3>
+    <ul>
+        <li>PPM and emergency fault response on overhead/underground distribution networks.</li>
+        <li>HV isolation, grounding, bonding, and switching protocols.</li>
+        <li>Transformer diagnostics, insulation failure analysis, and phase defect identification.</li>
+    </ul>
+
+    <hr>
+
+    <h2>🖥️ The Operational Technology (OT) Advantage</h2>
+
+    <p>
+        Modern energy networks, water utility stations, and smart grids rely heavily on automation.
+        My ongoing studies in <strong>System Administration</strong> allow me to serve as an <strong>Operational Technology (OT) asset</strong>.
+        I don’t just wire sensors or meters — I configure Linux/Windows servers, manage network routing,
+        and secure SCADA communication pathways that deliver real-time field data to cloud platforms.
+    </p>
+
+    <hr>
+
+    <h2>🎯 Professional Goals (UK-SPEC Aligned)</h2>
+
+    <h3>🗲 Goal 1: Deepen Technical & Practical Expertise</h3>
+    <p>Advance capabilities across electrical networks, automation, and smart utility architectures.</p>
+
+    <h3>📜 Goal 2: Advance UK-Recognized Technical Credentials</h3>
+    <p>Complete BSc in System Administration and obtain advanced UK safety certifications.</p>
+
+    <h3>📋 Goal 3: Curate an Interactive Engineering Case Portfolio</h3>
+    <p>Publish four detailed engineering case studies with schematics and troubleshooting logs.</p>
+
+    <h3>🛡️ Goal 4: Champion Operational Safety & Engineering Ethics</h3>
+    <p>Lead safety culture, enforce LOTOTO, and contribute to RAMS documentation.</p>
+
+    <hr>
+
+    <h2>📞 Contact Information</h2>
+
+    <p>Email: <strong>mclergy06@gmail.com</strong></p>
+    <p>Phone: <strong>07458676460</strong></p>
+    <p>LinkedIn: <a href="https://linkedin.com">Connect with me</a></p>
+    <p><a href="assets/Clergy_Mandizvidza_CV.pdf">Download My Master CV (PDF)</a></p>
 
 </div>
 
 <footer>
-    © 2026 Clergy Mandizvidza — Engineering Portfolio
+    © 2026 Clergy Mandizvidza — All Rights Reserved
 </footer>
+
+<script>
+function toggleSearch() {
+    let bar = document.getElementById("searchBar");
+    bar.style.display = (bar.style.display === "none" || bar.style.display === "") ? "block" : "none";
+}
+
+function searchPage() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let bodyText = document.body.innerText.toLowerCase();
+
+    if (input.length > 2) {
+        console.log(bodyText.includes(input) ? "Match found" : "No match");
+    }
+}
+</script>
 
 </body>
 </html>
